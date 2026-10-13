@@ -1,5 +1,6 @@
 /**
- * Gestión y Validación del Formulario de Contacto Legal
+ * Gestión y Envío Asíncrono del Formulario de Contacto
+ * Integración con Base de Datos Supabase en Tiempo Real
  * Bufete Jurídico Martínez Muñoz
  */
 
@@ -9,15 +10,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!contactForm) return;
 
-  // Manejo de envío con validación completa
+  // Configuración de Supabase
+  const SUPABASE_URL = 'https://kioowgnzmmhqmzodtpum.supabase.co';
+  const SUPABASE_KEY = 'sb_publishable_ZDF770U7doR4bXg83EBf6g_YK-QI89U';
+
+  // Mapeo de áreas visibles a slugs de la base de datos
+  const AREA_SLUG_MAP = {
+    'Derecho Civil': 'civil',
+    'Derecho de Familia': 'familia',
+    'Derecho Laboral': 'laboral',
+    'Derecho Penal': 'penal',
+    'Derecho Mercantil': 'mercantil',
+    'Derecho Administrativo': 'administrativo',
+    'Asuntos Notariales': 'notarial',
+    'Trámites Jurídicos': 'tramites',
+    'Litigios y Representación': 'litigios',
+    'Asesoría Empresarial': 'empresarial',
+    'Otra Consulta Legal': null
+  };
+
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // 1. Detección Anti-Spam Honeypot (campo oculto)
+    // 1. Detección Anti-Spam Honeypot (campo oculto invisible a humanos)
     const honeypot = document.getElementById('formHoneypot');
     if (honeypot && honeypot.value.trim() !== '') {
-      // Ignorar silenciosamente si un bot completó el campo invisible
-      return;
+      return; // Detener silenciosamente
     }
 
     // 2. Extracción y Limpieza de Datos
@@ -60,15 +78,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (!privacidadAceptada) {
-      errores.push('Debe aceptar el Aviso de Privacidad y el descargo de responsabilidad para enviar la consulta.');
+      errores.push('Debe aceptar el Aviso de Privacidad y el descargo legal para enviar la consulta.');
     }
 
-    // Si existen errores de validación, mostrarlos claramente
     if (errores.length > 0) {
       if (feedbackBox) {
         feedbackBox.className = 'form-alert-feedback error';
         feedbackBox.innerHTML = `
-          <strong><i class="fa-solid fa-circle-exclamation"></i> Por favor verifique la siguiente información:</strong>
+          <strong><i class="fa-solid fa-circle-exclamation"></i> Por favor verifique los siguientes campos:</strong>
           <ul style="margin-top: 8px; padding-left: 20px; text-align: left;">
             ${errores.map(err => `<li>${err}</li>`).join('')}
           </ul>
@@ -79,47 +96,68 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // 4. Bloqueo de Reenvíos e Indicador de Envío
+    // 4. Bloqueo de Reenvío e Indicador de Envío
     const submitBtn = contactForm.querySelector('button[type="submit"]');
     const originalBtnHtml = submitBtn ? submitBtn.innerHTML : 'Enviar Consulta';
 
     if (submitBtn) {
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Procesando y transmitiendo consulta...';
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Guardando y procesando consulta...';
     }
 
     try {
-      // Simulación de envío con latencia realista de procesamiento
-      // En entorno de integración con Supabase / API backend:
-      // const res = await fetch('/api/consultas', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({...}) });
-      await new Promise(resolve => setTimeout(resolve, 850));
+      const areaSlug = AREA_SLUG_MAP[area] || null;
+
+      // Envío directo a la base de datos Supabase
+      const response = await fetch(`${SUPABASE_URL}/rest/v1/consultas_contacto`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_KEY,
+          'Authorization': `Bearer ${SUPABASE_KEY}`,
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({
+          nombre_completo: nombre,
+          email: email,
+          telefono: telefono || null,
+          area_slug: areaSlug,
+          mensaje: mensaje,
+          aviso_privacidad_aceptado: true
+        })
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('Error al registrar en Supabase:', response.status, errorText);
+        throw new Error(`Error en servidor (${response.status})`);
+      }
 
       // 5. Confirmación Exitosa al Usuario
       if (feedbackBox) {
         feedbackBox.className = 'form-alert-feedback success';
         
-        // Sanitizar texto para inserción segura
         const safeNombre = document.createTextNode(nombre).wholeText;
         const safeArea = document.createTextNode(area).wholeText;
         
         feedbackBox.innerHTML = `
           <div style="font-size: 1.05rem; margin-bottom: 6px;">
-            <i class="fa-solid fa-circle-check"></i> <strong>Consulta enviada exitosamente</strong>
+            <i class="fa-solid fa-circle-check"></i> <strong>Consulta Registrada Exitosamente</strong>
           </div>
-          <p style="margin: 0; color: #166534; font-size: 0.9rem;">
-            Estimado/a <strong>${safeNombre}</strong>, hemos recibido su consulta correspondiente al área de <strong>${safeArea}</strong>. El equipo del Bufete Martínez Muñoz revisará los antecedentes iniciales y se pondrá en comunicación con usted a la brevedad.
+          <p style="margin: 0; color: #166534; font-size: 0.9rem; line-height: 1.6;">
+            Estimado/a <strong>${safeNombre}</strong>, su solicitud referente a <strong>${safeArea}</strong> ha sido guardada en nuestro sistema de atención legal. La Abogada Lizbeth Nicolle Martínez Muñoz revisará los antecedentes iniciales y se comunicará con usted a la brevedad.
           </p>
         `;
 
-        // Atajo opcional para continuar también por WhatsApp oficial si lo prefiere
-        const waText = `Hola Abogada Lizbeth Martínez. Mi nombre es ${nombre}. Deseo orientación sobre ${area}. Detalle: ${mensaje}`;
+        // Atajo opcional de WhatsApp para enviar copia directa
+        const waText = `Hola Abogada Lizbeth Martínez. Mi nombre es ${nombre}. Acabo de enviar una consulta web sobre ${area}. Detalle: ${mensaje}`;
         const waLink = `https://wa.me/50432948396?text=${encodeURIComponent(waText)}`;
         
         const waShortcut = document.createElement('div');
         waShortcut.style.marginTop = '14px';
         waShortcut.innerHTML = `
           <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%; font-size: 0.85rem;">
-            <i class="fa-brands fa-whatsapp"></i> Continuar esta consulta vía WhatsApp ahora
+            <i class="fa-brands fa-whatsapp"></i> Enviar también copia por WhatsApp Oficial
           </a>
         `;
         feedbackBox.appendChild(waShortcut);
@@ -127,14 +165,18 @@ document.addEventListener('DOMContentLoaded', () => {
         feedbackBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
 
-      // Reiniciar formulario
       contactForm.reset();
 
     } catch (error) {
       if (feedbackBox) {
         feedbackBox.className = 'form-alert-feedback error';
         feedbackBox.innerHTML = `
-          <i class="fa-solid fa-triangle-exclamation"></i> Ocurrió un error al procesar su solicitud. Por favor contáctenos directamente a través de nuestro WhatsApp oficial: <strong>+504 3294-8396</strong>.
+          <div style="font-size: 1rem; margin-bottom: 5px;">
+            <i class="fa-solid fa-triangle-exclamation"></i> <strong>Inconveniente en la conexión</strong>
+          </div>
+          <p style="margin: 0; font-size: 0.9rem; color: #991B1B;">
+            No se pudo completar el envío web en este instante. Por favor contáctenos directamente a través de nuestro WhatsApp oficial: <strong>+504 3294-8396</strong> o llamando a nuestro despacho.
+          </p>
         `;
         feedbackBox.style.display = 'block';
       }

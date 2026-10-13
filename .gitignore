@@ -1,0 +1,12 @@
+# Variables de Entorno y Secretos
+.env
+.env.local
+.env.*.local
+
+# Logs y Dependencias
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+node_modules/
+.DS_Store
+Thumbs.db
