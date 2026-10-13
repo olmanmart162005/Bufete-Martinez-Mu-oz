@@ -126,23 +126,23 @@ ul {
   list-style: none;
 }
 
-/* Contenedor central */
+/* Contenedor central generoso */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1340px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
 }
 
 /* =====================================================================
    TOPBAR INFORMATIVA
    ===================================================================== */
 .topbar {
-  background-color: var(--primary-night);
+  background-color: #0C1622;
   color: #CBD5E1;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   padding: 8px 0;
-  border-bottom: 1px solid rgba(184, 154, 98, 0.2);
+  border-bottom: 1px solid rgba(184, 154, 98, 0.22);
 }
 
 .topbar-container {
@@ -156,7 +156,7 @@ ul {
 .topbar-info {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 26px;
   flex-wrap: wrap;
 }
 
@@ -165,14 +165,17 @@ ul {
   align-items: center;
   gap: 8px;
   color: #CBD5E1;
+  white-space: nowrap;
 }
 
 .topbar-item i {
   color: var(--secondary);
+  font-size: 0.85rem;
 }
 
 .topbar-item a {
   color: #CBD5E1;
+  text-decoration: none;
 }
 
 .topbar-item a:hover {
@@ -201,88 +204,113 @@ ul {
 }
 
 /* =====================================================================
-   NAVBAR / CABECERA PRINCIPAL
+   NAVBAR / CABECERA PRINCIPAL REFINADA
    ===================================================================== */
 .main-header {
   position: sticky;
   top: 0;
   z-index: 1000;
   background: var(--bg-surface);
-  box-shadow: 0 2px 14px rgba(16, 29, 44, 0.05);
+  box-shadow: 0 2px 20px rgba(16, 29, 44, 0.06);
   transition: var(--transition);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(27, 48, 70, 0.08);
 }
 
 .main-header.scrolled {
-  box-shadow: 0 6px 22px rgba(16, 29, 44, 0.10);
+  box-shadow: 0 8px 26px rgba(16, 29, 44, 0.12);
 }
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 90px;
+  height: 86px;
+  gap: 20px;
 }
 
+/* Brand / Logotipo */
 .brand-wrapper {
   display: flex;
   align-items: center;
   gap: 14px;
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
 .brand-logo-img {
-  height: 68px;
+  height: 54px;
   width: auto;
   object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(184, 154, 98, 0.2));
 }
 
 .brand-names {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  line-height: 1;
 }
 
 .brand-main {
   font-family: var(--font-serif);
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--primary-night);
   line-height: 1.15;
-  letter-spacing: 0.6px;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
 }
 
 .brand-sub {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--secondary);
-  letter-spacing: 2px;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--secondary-dark);
+  letter-spacing: 2.8px;
   text-transform: uppercase;
+  white-space: nowrap;
+  margin-top: 3px;
 }
 
+/* Enlaces de Navegación */
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: clamp(10px, 1.4vw, 24px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-item {
+  flex-shrink: 0;
 }
 
 .nav-item a {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  color: var(--primary-night);
+  color: #1A2736;
   text-transform: uppercase;
-  letter-spacing: 0.6px;
-  padding: 8px 2px;
+  letter-spacing: 0.7px;
+  padding: 8px 4px;
   position: relative;
+  white-space: nowrap !important;
+  display: inline-block;
+  transition: color 0.2s ease;
 }
 
 .nav-item a::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background: var(--secondary);
-  transition: var(--transition);
+  background: linear-gradient(90deg, var(--secondary-light), var(--secondary));
+  transition: width 0.25s ease;
+  border-radius: 2px;
 }
 
 .nav-item a:hover::after,
@@ -295,8 +323,34 @@ ul {
   color: var(--secondary-dark);
 }
 
+/* Botón CTA Header */
 .nav-cta-btn {
-  display: block;
+  flex-shrink: 0;
+}
+
+.nav-btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  white-space: nowrap !important;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #B89A62 0%, #9E7F45 100%);
+  color: #FFFFFF !important;
+  border: 1px solid rgba(223, 196, 142, 0.5);
+  box-shadow: 0 4px 14px rgba(184, 154, 98, 0.28);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.nav-btn-cta:hover {
+  background: linear-gradient(135deg, #C5A059 0%, #A8843E 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(184, 154, 98, 0.45);
 }
 
 .menu-toggle-btn {
@@ -317,7 +371,7 @@ ul {
 }
 
 /* =====================================================================
-   BOTONES INSTITUCIONALES
+   BOTONES INSTITUCIONALES GENERALES
    ===================================================================== */
 .btn {
   display: inline-flex;
@@ -335,20 +389,20 @@ ul {
   border: 1px solid transparent;
   text-decoration: none;
   line-height: 1.2;
+  white-space: nowrap !important;
 }
 
 .btn-gold {
-  background-color: var(--secondary);
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
   color: #FFFFFF;
-  border-color: var(--secondary);
+  border-color: rgba(223, 196, 142, 0.4);
   box-shadow: var(--shadow-gold);
 }
 
 .btn-gold:hover {
-  background-color: var(--secondary-dark);
-  border-color: var(--secondary-dark);
+  background: linear-gradient(135deg, #C5A059 0%, #9E7F45 100%);
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(184, 154, 98, 0.35);
+  box-shadow: 0 10px 24px rgba(184, 154, 98, 0.38);
 }
 
 .btn-outline-gold {
@@ -410,6 +464,7 @@ ul {
   color: var(--secondary-dark);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  white-space: nowrap !important;
 }
 
 .btn-link-gold:hover {
@@ -583,7 +638,7 @@ ul {
 }
 
 .footer-brand-logo {
-  height: 64px;
+  height: 60px;
   background: #FFFFFF;
   padding: 6px 12px;
   border-radius: var(--radius-sm);
@@ -639,6 +694,7 @@ ul {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  white-space: nowrap;
 }
 
 .footer-nav a:hover {
@@ -737,51 +793,22 @@ ul {
 /* =====================================================================
    RESPONSIVE DESIGN & MEDIA QUERIES
    ===================================================================== */
-@media (max-width: 1024px) {
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .grid-4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .topbar {
-    display: none;
-  }
-
-  .navbar {
-    height: 75px;
-  }
-
-  .brand-logo-img {
-    height: 55px;
-  }
-
-  .brand-main {
-    font-size: 1rem;
-  }
-
-  .brand-sub {
-    font-size: 0.65rem;
-  }
-
+@media (max-width: 1140px) {
   .menu-toggle-btn {
     display: block;
   }
 
   .nav-links {
     position: fixed;
-    top: 75px;
+    top: 84px;
     left: -100%;
     width: 100%;
-    height: calc(100vh - 75px);
+    height: calc(100vh - 84px);
     background: #FFFFFF;
     flex-direction: column;
     align-items: flex-start;
-    padding: 25px 20px;
-    gap: 14px;
+    padding: 30px 24px;
+    gap: 16px;
     box-shadow: var(--shadow-lg);
     transition: var(--transition);
     overflow-y: auto;
@@ -794,6 +821,32 @@ ul {
 
   .nav-cta-btn {
     display: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    display: none;
+  }
+
+  .navbar {
+    height: 72px;
+  }
+
+  .brand-logo-img {
+    height: 46px;
+  }
+
+  .brand-main {
+    font-size: 1.05rem;
+  }
+
+  .brand-sub {
+    font-size: 0.62rem;
   }
 
   .section-py {
