@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bufetemartinezmunoz.com/sitemap.xml

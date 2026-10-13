@@ -1,21 +1,25 @@
-/* ========================================================
-   ESTILOS ESPECÍFICOS DE SECCIONES, TARJETAS Y COMPONENTES
-   ======================================================== */
+/* =====================================================================
+   BUFETE JURÍDICO MARTÍNEZ MUÑOZ
+   Componentes, Tarjetas & Secciones Especializadas (components.css)
+   ===================================================================== */
 
-/* HERO PRINCIPAL */
+/* =====================================================================
+   1. HERO PRINCIPAL EDITORIAL
+   ===================================================================== */
 .hero-wrapper {
-  background: linear-gradient(135deg, rgba(10, 18, 26, 0.95) 0%, rgba(28, 43, 58, 0.88) 100%),
-              radial-gradient(circle at top right, rgba(197, 160, 89, 0.28), transparent 60%);
+  background: linear-gradient(135deg, rgba(16, 29, 44, 0.96) 0%, rgba(27, 48, 70, 0.92) 100%),
+              radial-gradient(circle at 80% 20%, rgba(184, 154, 98, 0.22), transparent 50%);
   color: #FFFFFF;
-  padding: 100px 0 90px;
+  padding: 85px 0 80px;
   position: relative;
   overflow: hidden;
+  border-bottom: 3px solid var(--secondary);
 }
 
 .hero-layout {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 45px;
+  gap: 50px;
   align-items: center;
 }
 
@@ -23,132 +27,123 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(197, 160, 89, 0.15);
-  border: 1px solid rgba(197, 160, 89, 0.4);
+  background: rgba(184, 154, 98, 0.14);
+  border: 1px solid rgba(184, 154, 98, 0.35);
   color: var(--secondary-light);
-  padding: 8px 16px;
+  padding: 7px 16px;
   border-radius: var(--radius-sm);
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-size: 0.8rem;
+  font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .hero-main-title {
-  font-size: 3.4rem;
-  font-weight: 800;
+  font-size: 3.1rem;
+  font-weight: 700;
   color: #FFFFFF;
-  line-height: 1.12;
-  margin-bottom: 10px;
+  line-height: 1.15;
+  margin-bottom: 14px;
 }
 
 .hero-main-title span {
-  color: var(--secondary);
-  display: block;
-}
-
-.hero-lawyer-title {
-  font-size: 1.65rem;
-  font-weight: 600;
   color: var(--secondary-light);
-  margin-bottom: 4px;
-}
-
-.hero-lawyer-badge {
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #CBD5E1;
   display: block;
-  margin-bottom: 22px;
 }
 
 .hero-desc {
-  font-size: 1.18rem;
+  font-size: 1.12rem;
   color: #CBD5E1;
-  max-width: 600px;
-  margin-bottom: 35px;
+  max-width: 580px;
+  margin-bottom: 32px;
+  line-height: 1.8;
   font-weight: 300;
-  line-height: 1.75;
 }
 
 .hero-btns {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 }
 
 .hero-highlights {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 24px;
 }
 
 .highlight-box {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: #F1F5F9;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #E2E8F0;
 }
 
 .highlight-box i {
-  color: var(--secondary);
-  font-size: 1.2rem;
+  color: var(--secondary-light);
+  font-size: 1.1rem;
 }
 
+/* Tarjeta Hero Media (Fotografía de la Abogada) */
 .hero-media-box {
   display: flex;
   justify-content: center;
-  position: relative;
 }
 
 .hero-img-card {
   position: relative;
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-  border: 2px solid rgba(197, 160, 89, 0.35);
-  background: var(--primary);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(184, 154, 98, 0.35);
+  background: var(--primary-institutional);
+  max-width: 420px;
 }
 
 .hero-img-card img {
-  max-height: 540px;
-  width: auto;
+  width: 100%;
+  height: 500px;
   object-fit: cover;
+  object-position: top center;
+  display: block;
 }
 
 .hero-badge-float {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  background: rgba(17, 29, 41, 0.92);
+  right: 20px;
+  background: rgba(16, 29, 44, 0.94);
   backdrop-filter: blur(8px);
   border: 1px solid var(--secondary);
-  padding: 14px 18px;
   border-radius: var(--radius-sm);
-  color: #FFFFFF;
+  padding: 14px 18px;
 }
 
 .hero-badge-float h5 {
-  color: var(--secondary-light);
-  font-size: 0.82rem;
-  letter-spacing: 1px;
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  margin-bottom: 2px;
 }
 
 .hero-badge-float p {
-  font-size: 0.95rem;
-  font-weight: 700;
+  color: var(--secondary-light);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
   margin: 0;
 }
 
-/* BARRA DE CONTACTO RÁPIDO */
+/* =====================================================================
+   2. BARRA DE CONTACTO RÁPIDO
+   ===================================================================== */
 .quick-bar {
   background: #FFFFFF;
   border-bottom: 1px solid var(--border);
@@ -161,10 +156,10 @@
 }
 
 .quick-bar-item {
-  padding: 24px 20px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 15px;
+  padding: 22px 20px;
   border-right: 1px solid var(--border);
 }
 
@@ -173,38 +168,42 @@
 }
 
 .quick-icon-circle {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: rgba(197, 160, 89, 0.12);
+  background: var(--secondary-subtle);
   color: var(--secondary-dark);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   flex-shrink: 0;
 }
 
 .quick-detail h5 {
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  color: var(--text-muted);
   letter-spacing: 1px;
-  margin-bottom: 2px;
+  color: var(--text-muted);
+  margin-bottom: 3px;
+  font-weight: 600;
 }
 
-.quick-detail p, .quick-detail a {
-  font-size: 0.95rem;
+.quick-detail a, .quick-detail p {
+  color: var(--primary-night);
   font-weight: 600;
-  color: var(--primary);
+  font-size: 0.92rem;
+  margin: 0;
 }
 
 .quick-detail a:hover {
   color: var(--secondary-dark);
 }
 
-/* ÁREAS DE PRÁCTICA - GRID Y TARJETAS */
+/* =====================================================================
+   3. TARJETAS DE ÁREAS DE PRÁCTICA (PREMIUM)
+   ===================================================================== */
 .areas-grid-layout {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -214,58 +213,55 @@
 .area-card-premium {
   background: #FFFFFF;
   border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
   border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
   display: flex;
   flex-direction: column;
-  transition: var(--transition);
 }
 
 .area-card-premium:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--secondary);
+  border-color: var(--border-gold);
 }
 
 .area-card-img-wrapper {
   position: relative;
-  height: 200px;
+  height: 180px;
+  background: var(--primary-night);
   overflow: hidden;
-  background: var(--primary);
 }
 
-.area-card-img-wrapper svg,
 .area-card-img-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.4s ease;
 }
 
-.area-card-premium:hover .area-card-img-wrapper svg,
 .area-card-premium:hover .area-card-img-wrapper img {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .area-card-category {
   position: absolute;
   top: 14px;
-  left: 14px;
-  background: rgba(17, 29, 41, 0.88);
-  backdrop-filter: blur(4px);
+  right: 14px;
+  background: rgba(16, 29, 44, 0.88);
+  border: 1px solid var(--secondary);
   color: var(--secondary-light);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 6px 12px;
+  padding: 4px 10px;
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(197, 160, 89, 0.4);
 }
 
 .area-card-body {
-  padding: 28px;
+  padding: 30px 26px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -273,126 +269,311 @@
 
 .area-card-title {
   font-size: 1.35rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-  color: var(--primary);
+  margin-bottom: 10px;
+  color: var(--primary-night);
 }
 
 .area-card-desc {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--text-muted);
   line-height: 1.7;
-  margin-bottom: 20px;
-  flex-grow: 1;
+  margin-bottom: 18px;
 }
 
 .area-card-list {
-  margin-bottom: 22px;
-  border-top: 1px solid var(--border);
-  padding-top: 15px;
+  margin-bottom: 24px;
+  flex-grow: 1;
 }
 
 .area-card-list li {
   font-size: 0.88rem;
   color: var(--text-main);
-  margin-bottom: 8px;
+  margin-bottom: 9px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
 }
 
 .area-card-list li i {
   color: var(--secondary-dark);
   font-size: 0.8rem;
+  margin-top: 5px;
+  flex-shrink: 0;
 }
 
 .area-card-footer {
-  border-top: 1px solid var(--border);
-  padding-top: 18px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  border-top: 1px solid var(--border-light);
+  padding-top: 16px;
 }
 
-/* RESEÑAS / TESTIMONIOS ESTABLECIDOS */
+/* =====================================================================
+   4. PERFIL PROFESIONAL DE LA ABOGADA
+   ===================================================================== */
+.lawyer-profile-box {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 440px 1fr;
+}
+
+.lawyer-photo-col {
+  background: var(--primary-night);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.lawyer-photo-col img {
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.lawyer-badge-overlay {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: rgba(16, 29, 44, 0.92);
+  border: 1px solid var(--secondary);
+  color: var(--secondary-light);
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.lawyer-info-col {
+  padding: 50px 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lawyer-info-title {
+  font-size: 2.2rem;
+  color: var(--primary-night);
+  margin-bottom: 4px;
+}
+
+.lawyer-info-badge {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--secondary-dark);
+  margin-bottom: 20px;
+}
+
+.lawyer-grid-fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 25px 0 30px;
+}
+
+.lawyer-field-card {
+  background: var(--bg-subtle);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  border-left: 3px solid var(--secondary);
+}
+
+.lawyer-field-card span {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.lawyer-field-card strong {
+  font-size: 0.92rem;
+  color: var(--primary-night);
+  line-height: 1.4;
+  display: block;
+}
+
+.lawyer-field-card.editable-slot strong {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* =====================================================================
+   5. METODOLOGÍA DE ATENCIÓN (4 PASOS)
+   ===================================================================== */
+.process-flow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.process-step-item {
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  padding: 34px 24px;
+  text-align: center;
+  position: relative;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.process-step-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-gold);
+  box-shadow: var(--shadow-md);
+}
+
+.step-num-circle {
+  width: 52px;
+  height: 52px;
+  background: var(--primary-night);
+  border: 2px solid var(--secondary);
+  color: var(--secondary-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 auto 18px;
+}
+
+.process-step-item h4 {
+  font-size: 1.05rem;
+  color: var(--primary-night);
+  margin-bottom: 10px;
+}
+
+.process-step-item p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* =====================================================================
+   6. PILARES / VALORES
+   ===================================================================== */
+.pillar-card {
+  background: #FFFFFF;
+  padding: 32px 26px;
+  border-radius: var(--radius-md);
+  border-top: 3px solid var(--secondary);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.pillar-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.pillar-icon {
+  font-size: 1.8rem;
+  color: var(--secondary-dark);
+  margin-bottom: 14px;
+  display: block;
+}
+
+.pillar-card h4 {
+  font-size: 1.1rem;
+  color: var(--primary-night);
+  margin-bottom: 8px;
+}
+
+.pillar-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* =====================================================================
+   7. TESTIMONIOS Y EXPERIENCIAS
+   ===================================================================== */
 .reviews-grid-box {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 28px;
 }
 
 .review-card-item {
   background: #FFFFFF;
-  padding: 34px 28px;
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
   border: 1px solid var(--border);
-  position: relative;
+  padding: 34px 28px;
+  box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: var(--transition);
-}
-
-.review-card-item:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--secondary-light);
 }
 
 .review-stars-box {
-  color: #F59E0B;
+  color: var(--secondary);
+  font-size: 0.85rem;
   margin-bottom: 16px;
-  font-size: 0.95rem;
-  display: flex;
-  gap: 4px;
 }
 
 .review-quote-text {
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   color: var(--text-main);
   line-height: 1.75;
   font-style: italic;
-  margin-bottom: 25px;
-  position: relative;
+  margin-bottom: 24px;
 }
 
 .review-author-meta {
   display: flex;
   align-items: center;
   gap: 14px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border-light);
   padding-top: 16px;
 }
 
 .author-avatar {
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  background: var(--primary);
-  color: var(--secondary);
+  background: var(--primary-night);
+  color: var(--secondary-light);
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 0.85rem;
 }
 
 .author-info h5 {
   font-family: var(--font-sans);
-  font-size: 0.98rem;
+  font-size: 0.92rem;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--primary-night);
   margin-bottom: 2px;
 }
 
 .author-info span {
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
 }
 
-/* PREGUNTAS FRECUENTES (FAQ) */
+/* =====================================================================
+   8. SISTEMA DE ACORDEÓN PARA PREGUNTAS FRECUENTES (FAQ)
+   ===================================================================== */
 .faq-accordion-wrapper {
   max-width: 860px;
   margin: 0 auto;
@@ -400,31 +581,38 @@
 
 .faq-card-item {
   background: #FFFFFF;
-  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  margin-bottom: 16px;
-  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  margin-bottom: 12px;
   overflow: hidden;
+  transition: var(--transition);
 }
 
 .faq-btn-header {
   width: 100%;
-  text-align: left;
-  padding: 22px 26px;
+  padding: 20px 24px;
   background: none;
   border: none;
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  text-align: left;
   font-family: var(--font-sans);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-night);
+  transition: var(--transition);
+}
+
+.faq-btn-header:hover {
+  background: var(--bg-subtle);
+  color: var(--secondary-dark);
 }
 
 .faq-btn-header i {
   color: var(--secondary);
+  font-size: 0.85rem;
   transition: transform 0.3s ease;
 }
 
@@ -435,93 +623,146 @@
 .faq-content-body {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.35s ease-out;
-  background: var(--bg-subtle);
+  transition: max-height 0.3s ease;
+  background: #FFFFFF;
 }
 
 .faq-inner-pad {
-  padding: 22px 26px;
-  font-size: 0.98rem;
+  padding: 0 24px 22px;
+  font-size: 0.95rem;
   color: var(--text-muted);
-  line-height: 1.8;
-  border-top: 1px solid var(--border);
+  line-height: 1.75;
+  border-top: 1px solid var(--border-light);
+  padding-top: 16px;
 }
 
-/* FORMULARIO DE CONTACTO AVANZADO */
+/* =====================================================================
+   9. FORMULARIO DE CONTACTO PROFESIONAL
+   ===================================================================== */
 .contact-grid-main {
   display: grid;
-  grid-template-columns: 1.3fr 0.9fr;
+  grid-template-columns: 1.25fr 0.85fr;
   gap: 40px;
   background: #FFFFFF;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md);
   border: 1px solid var(--border);
   overflow: hidden;
 }
 
 .contact-form-container {
-  padding: 50px 45px;
+  padding: 45px 40px;
 }
 
 .form-group-box {
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .form-label-custom {
   display: block;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary-night);
   text-transform: uppercase;
-  letter-spacing: 0.6px;
-  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
 }
 
 .form-input-custom {
   width: 100%;
-  padding: 14px 18px;
+  padding: 12px 16px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--text-main);
-  background: var(--bg-subtle);
+  background: #FFFFFF;
   transition: var(--transition);
 }
 
 .form-input-custom:focus {
   outline: none;
   border-color: var(--secondary);
-  background: #FFFFFF;
-  box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2);
+  box-shadow: 0 0 0 3px rgba(184, 154, 98, 0.2);
 }
 
 .form-dual-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 18px;
 }
 
+/* Checkbox de Privacidad y Advertencia Confidencial */
+.privacy-checkbox-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 18px 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.privacy-checkbox-wrapper input[type="checkbox"] {
+  margin-top: 3px;
+  accent-color: var(--secondary);
+  cursor: pointer;
+}
+
+.privacy-checkbox-wrapper a {
+  color: var(--secondary-dark);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.confidentiality-notice {
+  background: var(--bg-subtle);
+  border-left: 3px solid var(--secondary);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.confidentiality-notice strong {
+  color: var(--primary-night);
+}
+
+/* Campo Honeypot Oculto contra Bots */
+.hp-field {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Alertas de Feedback */
 .form-alert-feedback {
   display: none;
-  padding: 18px 20px;
+  padding: 16px 20px;
   border-radius: var(--radius-sm);
   margin-top: 20px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-align: center;
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 .form-alert-feedback.success {
-  background-color: #ECFDF5;
-  color: #065F46;
-  border: 1px solid #A7F3D0;
+  background-color: #F0FDF4;
+  color: #166534;
+  border: 1px solid #BBF7D0;
 }
 
+.form-alert-feedback.error {
+  background-color: #FEF2F2;
+  color: #991B1B;
+  border: 1px solid #FECACA;
+}
+
+/* Columna Lateral de Información Directa */
 .contact-aside-box {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(135deg, var(--primary-night) 0%, var(--primary-institutional) 100%);
   color: #FFFFFF;
-  padding: 50px 40px;
+  padding: 45px 36px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -529,25 +770,25 @@
 
 .contact-aside-box h3 {
   color: #FFFFFF;
-  font-size: 1.6rem;
-  margin-bottom: 15px;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
 }
 
 .contact-point-item {
   display: flex;
-  gap: 16px;
-  margin-bottom: 26px;
+  gap: 14px;
+  margin-bottom: 24px;
 }
 
 .contact-point-item i {
-  color: var(--secondary);
-  font-size: 1.3rem;
+  color: var(--secondary-light);
+  font-size: 1.2rem;
   margin-top: 4px;
 }
 
 .contact-point-text h6 {
   font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   color: #94A3B8;
   letter-spacing: 1px;
@@ -556,51 +797,181 @@
 .contact-point-text p, .contact-point-text a {
   color: #FFFFFF;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
-/* RESPONSIVE SUB-ESTILOS */
+.contact-point-text a:hover {
+  color: var(--secondary-light);
+}
+
+/* =====================================================================
+   10. BANNER CTA DESTACADO
+   ===================================================================== */
+.cta-banner-wrapper {
+  background: linear-gradient(135deg, var(--primary-night) 0%, var(--primary-institutional) 100%);
+  color: #FFFFFF;
+  padding: 70px 0;
+  text-align: center;
+  border-top: 3px solid var(--secondary);
+}
+
+.cta-banner-wrapper h2 {
+  color: #FFFFFF;
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.cta-banner-wrapper p {
+  color: #CBD5E1;
+  font-size: 1.1rem;
+  max-width: 620px;
+  margin: 0 auto 30px;
+}
+
+.cta-banner-btns {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* =====================================================================
+   11. CONTENIDO LEGAL Y DOCUMENTOS (PRIVACIDAD & TÉRMINOS)
+   ===================================================================== */
+.legal-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  padding: 45px 40px;
+  box-shadow: var(--shadow-sm);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.legal-card h2 {
+  font-size: 1.5rem;
+  color: var(--primary-night);
+  margin: 32px 0 14px;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 8px;
+}
+
+.legal-card h2:first-of-type {
+  margin-top: 0;
+}
+
+.legal-card p {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.legal-card ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.legal-card ul li {
+  list-style-type: disc;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+/* =====================================================================
+   RESPONSIVE ESPECÍFICO DE COMPONENTES
+   ===================================================================== */
 @media (max-width: 1024px) {
-  .hero-main-title {
-    font-size: 2.8rem;
-  }
   .hero-layout {
     grid-template-columns: 1fr;
     text-align: center;
   }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .hero-btns {
     justify-content: center;
   }
+
   .hero-highlights {
     grid-template-columns: 1fr;
   }
+
   .quick-bar-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .quick-bar-item:nth-child(2) {
     border-right: none;
   }
+
+  .lawyer-profile-box {
+    grid-template-columns: 1fr;
+  }
+
+  .lawyer-photo-col img {
+    height: 420px;
+  }
+
   .reviews-grid-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-flow-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
+  .hero-wrapper {
+    padding: 60px 0 50px;
+  }
+
+  .hero-main-title {
+    font-size: 2.3rem;
+  }
+
   .quick-bar-grid {
     grid-template-columns: 1fr;
   }
+
   .quick-bar-item {
     border-right: none;
     border-bottom: 1px solid var(--border);
   }
+
   .areas-grid-layout,
-  .reviews-grid-box {
+  .reviews-grid-box,
+  .process-flow-grid {
     grid-template-columns: 1fr;
   }
+
   .contact-grid-main {
     grid-template-columns: 1fr;
   }
+
+  .contact-form-container {
+    padding: 30px 20px;
+  }
+
   .form-dual-row {
     grid-template-columns: 1fr;
+  }
+
+  .lawyer-grid-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .lawyer-info-col {
+    padding: 35px 24px;
+  }
+
+  .legal-card {
+    padding: 30px 20px;
   }
 }

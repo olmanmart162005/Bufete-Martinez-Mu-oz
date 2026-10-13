@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nuestros Servicios Jurídicos | Bufete Jurídico Martínez Muñoz</title>
-  <meta name="description" content="Servicios jurídicos profesionales del Bufete Jurídico Martínez Muñoz en Honduras: Asesorías, consultas, contratos, representación y trámites.">
+  <title>Servicios Jurídicos Profesionales | Bufete Jurídico Martínez Muñoz</title>
+  <meta name="description" content="Servicios jurídicos profesionales del Bufete Jurídico Martínez Muñoz en Honduras: Asesorías legales, contratos, litigios, trámites administrativos y asesoría corporativa.">
   <link rel="icon" type="image/png" href="LOGO.png">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,14 +17,16 @@
 </head>
 <body>
 
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
   <!-- TOPBAR -->
   <div class="topbar">
     <div class="container topbar-container">
       <div class="topbar-info">
         <div class="topbar-item">
           <i class="fa-solid fa-location-dot"></i>
-          <a href="https://share.google/VONZJvOMzdsaSsqNu" target="_blank" rel="noopener noreferrer" style="color: #CBD5E1;">
-            Ver ubicación oficial en Google Maps
+          <a href="https://share.google/VONZJvOMzdsaSsqNu" target="_blank" rel="noopener noreferrer">
+            Sede Legal en Honduras (Ver en Google Maps)
           </a>
         </div>
         <div class="topbar-item">
@@ -34,18 +36,18 @@
       </div>
       <div class="topbar-actions">
         <div class="topbar-social">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- HEADER -->
-  <header class="main-header">
+  <!-- HEADER NAVEGACIÓN -->
+  <header class="main-header" role="banner">
     <div class="container navbar">
-      <a href="index.html" class="brand-wrapper">
+      <a href="index.html" class="brand-wrapper" aria-label="Bufete Jurídico Martínez Muñoz - Inicio">
         <img src="LOGO.png" alt="Bufete Jurídico Martínez Muñoz" class="brand-logo-img">
         <div class="brand-names">
           <span class="brand-main">MARTÍNEZ MUÑOZ</span>
@@ -53,159 +55,269 @@
         </div>
       </a>
 
-      <button class="menu-toggle-btn" id="menuToggle" aria-label="Menú">
+      <button class="menu-toggle-btn" id="menuToggle" aria-label="Menú de Navegación" aria-expanded="false" aria-controls="navLinks">
         <i class="fa-solid fa-bars"></i>
       </button>
 
-      <ul class="nav-links" id="navLinks">
-        <li class="nav-item"><a href="index.html">Inicio</a></li>
-        <li class="nav-item"><a href="nosotros.html">Nosotros</a></li>
-        <li class="nav-item"><a href="areas.html">Áreas de Práctica</a></li>
-        <li class="nav-item active"><a href="servicios.html">Servicios</a></li>
-        <li class="nav-item"><a href="abogada.html">La Abogada</a></li>
-        <li class="nav-item"><a href="blog.html">Información Jurídica</a></li>
-        <li class="nav-item"><a href="contacto.html">Contacto</a></li>
-      </ul>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links" id="navLinks">
+          <li class="nav-item"><a href="index.html">Inicio</a></li>
+          <li class="nav-item"><a href="nosotros.html">El Bufete</a></li>
+          <li class="nav-item"><a href="areas.html">Áreas de Práctica</a></li>
+          <li class="nav-item active"><a href="servicios.html" aria-current="page">Servicios</a></li>
+          <li class="nav-item"><a href="abogada.html">La Abogada</a></li>
+          <li class="nav-item"><a href="blog.html">Información Jurídica</a></li>
+          <li class="nav-item"><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
 
       <div class="nav-cta-btn">
-        <a href="contacto.html" class="btn btn-gold">Solicitar asesoría</a>
+        <a href="contacto.html" class="btn btn-gold">Solicitar una consulta</a>
       </div>
     </div>
   </header>
 
-  <!-- PAGE BANNER -->
-  <div class="page-banner">
-    <div class="container">
-      <span class="page-banner-badge"><i class="fa-solid fa-briefcase"></i> Excelencia Jurídica</span>
-      <h1>Nuestros Servicios Jurídicos</h1>
-      <p>Modalidades de atención técnica, acompañamiento y representación adaptadas a sus necesidades.</p>
-      <div class="breadcrumbs">
-        <a href="index.html">Inicio</a> / <span>Servicios</span>
+  <main id="contenido-principal">
+    
+    <!-- PAGE BANNER -->
+    <div class="page-banner">
+      <div class="container">
+        <span class="page-banner-badge"><i class="fa-solid fa-briefcase"></i> Modalidades de Atención</span>
+        <h1>Nuestros Servicios Jurídicos</h1>
+        <p>Soluciones estructuradas de acompañamiento, asesoría y representación conforme al derecho hondureño.</p>
+        <div class="breadcrumbs">
+          <a href="index.html">Inicio</a> / <span>Servicios</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- SERVICIOS LISTADO -->
-  <section style="padding: 95px 0; background: #FFFFFF;">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-subtitle">Catálogo de Servicios</span>
-        <h2 class="section-title">Soluciones a su Alcance</h2>
-        <p class="section-desc">Distintos formatos de respaldo letrado con descripciones editables para ajustarse a las necesidades de personas y empresas.</p>
+    <!-- CATÁLOGO DE SERVICIOS -->
+    <section class="section-py bg-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Portafolio de Soluciones</span>
+          <h2 class="section-title">Modalidades de Acompañamiento Letrado</h2>
+          <p class="section-desc">Formatos de respaldo técnico adaptados a las necesidades particulares de personas individuales y organizaciones comerciales.</p>
+        </div>
+
+        <div class="grid-3" style="gap: 32px;">
+          
+          <!-- 1. Asesoría Jurídica Integral -->
+          <div class="pillar-card" style="border-top-color: var(--secondary); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="width: 50px; height: 50px; background: var(--secondary-subtle); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: var(--secondary-dark); font-size: 1.4rem; margin-bottom: 20px;">
+                <i class="fa-solid fa-comments"></i>
+              </div>
+              <h3 style="font-size: 1.25rem; color: var(--primary-night); margin-bottom: 12px;">Asesoría Jurídica Integral</h3>
+              <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 18px;">
+                Diagnóstico exhaustivo y orientación estratégica previa para que el cliente comprenda sus opciones legales antes de tomar decisiones de trascendencia patrimonial o personal.
+              </p>
+              <ul style="font-size: 0.85rem; color: var(--text-main); margin-bottom: 22px;">
+                <li style="margin-bottom: 6px;"><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Análisis normativo aplicable</li>
+                <li style="margin-bottom: 6px;"><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Identificación de contingencias y riesgos</li>
+                <li style="margin-bottom: 6px;"><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Recomendaciones preventivas</li>
+              </ul>
+            </div>
+            <a href="contacto.html" class="btn-link-gold">Solicitar asesoría <i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+
+          <!-- 2. Consultas Legales Puntuales -->
+          <div class="pillar-card" style="border-top-color: var(--secondary); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="width: 50px; height: 50px; background: var(--secondary-subtle); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: var(--secondary-dark); font-size: 1.4rem; margin-bottom: 20px;">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+              </div>
+              <h3 style="font-size: 1.25rem; color: var(--primary-night); margin-bottom: 12px;">Consultas Legales Específicas</h3>
+              <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 18px;">
+                Sesiones presenciales o virtuales orientadas a resolver interrogantes concretas, revisar antecedentes documentales y determinar la viabilidad de iniciar o contestar acciones legales.
+              </p>
+              <ul style="font-size: 0.85rem; color: var(--text-main); margin-bottom: 22px;">
+                <li style="margin-bottom: 6px;"><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Sesiones de orientación directa</li>
+                <li style="margin-bottom: 6px;"><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Explicación clara de procedimientos</li>
+                <li style="margin-bottom: 6px;"><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Estimación de costos y tiempos</li>
+              </ul>
+            </div>
+            <a href="contacto.html" class="btn-link-gold">Agendar consulta <i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+
+          <!-- 3. Elaboración y Revisión Contractual -->
+          <div class="pillar-card" style="border-top-color: var(--secondary); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="width: 50px; height: 50px; background: var(--secondary-subtle); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: var(--secondary-dark); font-size: 1.4rem; margin-bottom: 20px;">
+                <i class="fa-solid fa-file-signature"></i>
+              </div>
+              <h3 style="font-size: 1.25rem; color: var(--primary-night); margin-bottom: 12px;">Elaboración y Revisión de Contratos</h3>
+              <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 18px;">
+                Redacción rigurosa y auditoría técnica de instrumentos contractuales para garantizar el blindaje jurídico de sus acuerdos y prevenir futuros litigios.
+              </p>
+              <ul style="font-size: 0.85rem; color: var(--text-main); margin-bottom: 22px;">
+                <li style="margin-bottom: 6px;"><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Contratos civiles y mercantiles</li>
+                <li style="margin-bottom: 6px;"><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Convenios laborales y de confidencialidad</li>
+                <li style="margin-bottom: 6px;"><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Arrendamientos y promesas de venta</li>
+              </ul>
+            </div>
+            <a href="contacto.html" class="btn-link-gold">Revisar documento <i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+
+          <!-- 4. Representación y Litigios -->
+          <div class="pillar-card" style="border-top-color: var(--primary-institutional); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="width: 50px; height: 50px; background: rgba(27, 48, 70, 0.1); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: var(--primary-institutional); font-size: 1.4rem; margin-bottom: 20px;">
+                <i class="fa-solid fa-gavel"></i>
+              </div>
+              <h3 style="font-size: 1.25rem; color: var(--primary-night); margin-bottom: 12px;">Representación y Litigios</h3>
+              <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 18px;">
+                Patrocinio procesal técnico ante juzgados de letras, de paz y tribunales de apelaciones en Honduras, con seguimiento continuo de los plazos legales.
+              </p>
+              <ul style="font-size: 0.85rem; color: var(--text-main); margin-bottom: 22px;">
+                <li style="margin-bottom: 6px;"><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Redacción de demandas y contestaciones</li>
+                <li style="margin-bottom: 6px;"><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Asistencia a audiencias orales</li>
+                <li style="margin-bottom: 6px;"><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Interposición de recursos procesales</li>
+              </ul>
+            </div>
+            <a href="contacto.html" class="btn-link-gold">Consultar litigio <i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+
+          <!-- 5. Trámites Notariales y Registrales -->
+          <div class="pillar-card" style="border-top-color: var(--primary-institutional); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="width: 50px; height: 50px; background: rgba(27, 48, 70, 0.1); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: var(--primary-institutional); font-size: 1.4rem; margin-bottom: 20px;">
+                <i class="fa-solid fa-stamp"></i>
+              </div>
+              <h3 style="font-size: 1.25rem; color: var(--primary-night); margin-bottom: 12px;">Trámites Notariales y Registrales</h3>
+              <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 18px;">
+                Gestión diligente de escrituras públicas, auténticas, protocolizaciones y diligencias registrales ante el Instituto de la Propiedad y alcaldías.
+              </p>
+              <ul style="font-size: 0.85rem; color: var(--text-main); margin-bottom: 22px;">
+                <li style="margin-bottom: 6px;"><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Instrumentos públicos solemnes</li>
+                <li style="margin-bottom: 6px;"><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Inscripciones inmobiliarias</li>
+                <li style="margin-bottom: 6px;"><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Poderes y testimonios oficiales</li>
+              </ul>
+            </div>
+            <a href="contacto.html" class="btn-link-gold">Iniciar trámite <i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+
+          <!-- 6. Asesoría Preventiva Corporativa -->
+          <div class="pillar-card" style="border-top-color: var(--primary-institutional); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="width: 50px; height: 50px; background: rgba(27, 48, 70, 0.1); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: var(--primary-institutional); font-size: 1.4rem; margin-bottom: 20px;">
+                <i class="fa-solid fa-building-shield"></i>
+              </div>
+              <h3 style="font-size: 1.25rem; color: var(--primary-night); margin-bottom: 12px;">Asesoría Preventiva para Empresas</h3>
+              <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 18px;">
+                Acompañamiento recurrente para sociedades mercantiles, protegiendo las operaciones diarias en materias laboral, comercial y regulatoria.
+              </p>
+              <ul style="font-size: 0.85rem; color: var(--text-main); margin-bottom: 22px;">
+                <li style="margin-bottom: 6px;"><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Cumplimiento laboral continuo</li>
+                <li style="margin-bottom: 6px;"><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Actualización societaria y de libros</li>
+                <li style="margin-bottom: 6px;"><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Resolución extrajudicial de conflictos</li>
+              </ul>
+            </div>
+            <a href="contacto.html" class="btn-link-gold">Plan corporativo <i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+
+        </div>
+
+        <!-- ADVERTENCIA LEGAL ÉTICA -->
+        <div style="margin-top: 55px; background: var(--ivory); border-left: 3px solid var(--secondary); padding: 22px 26px; border-radius: var(--radius-sm);">
+          <h4 style="font-size: 0.95rem; color: var(--primary-night); margin-bottom: 6px;">
+            <i class="fa-solid fa-circle-info" style="color: var(--secondary);"></i> Nota Informativa Sobre la Contratación de Servicios
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0; line-height: 1.6;">
+            La información expuesta en este catálogo es de naturaleza exclusivamente descriptiva y formativa. El acceso a esta web no genera relación abogado-cliente. La prestación de cualquiera de los servicios profesionales descritos requiere una evaluación individualizada y la suscripción previa de una propuesta u hoja de encargo profesional debidamente formalizada.
+          </p>
+        </div>
+
       </div>
+    </section>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px;">
-        
-        <div style="background: var(--bg-subtle); padding: 35px 28px; border-radius: var(--radius-md); border: 1px solid var(--border); border-top: 4px solid var(--secondary);">
-          <i class="fa-solid fa-comments" style="font-size: 2.2rem; color: var(--secondary); margin-bottom: 20px; display: block;"></i>
-          <h3 style="font-size: 1.25rem; margin-bottom: 12px;">Asesoría jurídica</h3>
-          <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
-            [Descripción editable: Diagnóstico legal integral y orientación estratégica previa para que el cliente comprenda sus opciones conforme al marco legal hondureño.]
-          </p>
-          <a href="contacto.html" class="btn-link-gold">Solicitar asesoría <i class="fa-solid fa-chevron-right"></i></a>
+    <!-- BANNER DE CONTACTO -->
+    <section class="cta-banner-wrapper">
+      <div class="container">
+        <h2>¿Necesita Asistencia en Alguno de Estos Servicios?</h2>
+        <p>Comparta los detalles de su requerimiento para programar una evaluación letrada.</p>
+        <div class="cta-banner-btns">
+          <a href="contacto.html" class="btn btn-gold"><i class="fa-regular fa-paper-plane"></i> Formulario de Asesoría</a>
+          <a href="https://wa.me/50432948396?text=Hola%20Abogada%20Lizbeth%20Mart%C3%ADnez,%20deseo%20consultar%20sobre%20un%20servicio%20jur%C3%ADdico." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Oficial
+          </a>
         </div>
-
-        <div style="background: var(--bg-subtle); padding: 35px 28px; border-radius: var(--radius-md); border: 1px solid var(--border); border-top: 4px solid var(--secondary);">
-          <i class="fa-solid fa-magnifying-glass-chart" style="font-size: 2.2rem; color: var(--secondary); margin-bottom: 20px; display: block;"></i>
-          <h3 style="font-size: 1.25rem; margin-bottom: 12px;">Consultas legales</h3>
-          <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
-            [Descripción editable: Emisión de opiniones jurídicas técnicas, revisión de antecedentes y determinación de la viabilidad de acciones legales.]
-          </p>
-          <a href="contacto.html" class="btn-link-gold">Agendar consulta <i class="fa-solid fa-chevron-right"></i></a>
-        </div>
-
-        <div style="background: var(--bg-subtle); padding: 35px 28px; border-radius: var(--radius-md); border: 1px solid var(--border); border-top: 4px solid var(--secondary);">
-          <i class="fa-solid fa-file-signature" style="font-size: 2.2rem; color: var(--secondary); margin-bottom: 20px; display: block;"></i>
-          <h3 style="font-size: 1.25rem; margin-bottom: 12px;">Elaboración y revisión de documentos</h3>
-          <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
-            [Descripción editable: Redacción minuciosa y análisis de cláusulas en documentos legales, cartas de intención, convenios y acuerdos particulares.]
-          </p>
-          <a href="contacto.html" class="btn-link-gold">Revisar documento <i class="fa-solid fa-chevron-right"></i></a>
-        </div>
-
-        <div style="background: var(--bg-subtle); padding: 35px 28px; border-radius: var(--radius-md); border: 1px solid var(--border); border-top: 4px solid var(--secondary);">
-          <i class="fa-solid fa-scale-balanced" style="font-size: 2.2rem; color: var(--secondary); margin-bottom: 20px; display: block;"></i>
-          <h3 style="font-size: 1.25rem; margin-bottom: 12px;">Representación legal</h3>
-          <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
-            [Descripción editable: Patrocinio formal y personamiento legal ante tribunales de la República, instancias administrativas o instituciones del Estado.]
-          </p>
-          <a href="contacto.html" class="btn-link-gold">Pedir representación <i class="fa-solid fa-chevron-right"></i></a>
-        </div>
-
-        <div style="background: var(--bg-subtle); padding: 35px 28px; border-radius: var(--radius-md); border: 1px solid var(--border); border-top: 4px solid var(--secondary);">
-          <i class="fa-solid fa-handshake" style="font-size: 2.2rem; color: var(--secondary); margin-bottom: 20px; display: block;"></i>
-          <h3 style="font-size: 1.25rem; margin-bottom: 12px;">Acompañamiento en procesos</h3>
-          <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
-            [Descripción editable: Presencia constante y orientación jurídica durante audiencias, conciliaciones, firmas notariales y trámites de principio a fin.]
-          </p>
-          <a href="contacto.html" class="btn-link-gold">Conocer proceso <i class="fa-solid fa-chevron-right"></i></a>
-        </div>
-
-        <div style="background: var(--bg-subtle); padding: 35px 28px; border-radius: var(--radius-md); border: 1px solid var(--border); border-top: 4px solid var(--secondary);">
-          <i class="fa-solid fa-folder-tree" style="font-size: 2.2rem; color: var(--secondary); margin-bottom: 20px; display: block;"></i>
-          <h3 style="font-size: 1.25rem; margin-bottom: 12px;">Trámites jurídicos</h3>
-          <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
-            [Descripción editable: Diligenciamiento de trámites ante registros mercantiles, de la propiedad, alcaldías y organismos gubernamentales.]
-          </p>
-          <a href="contacto.html" class="btn-link-gold">Gestionar trámite <i class="fa-solid fa-chevron-right"></i></a>
-        </div>
-
-        <div style="background: var(--bg-subtle); padding: 35px 28px; border-radius: var(--radius-md); border: 1px solid var(--border); border-top: 4px solid var(--secondary);">
-          <i class="fa-solid fa-file-contract" style="font-size: 2.2rem; color: var(--secondary); margin-bottom: 20px; display: block;"></i>
-          <h3 style="font-size: 1.25rem; margin-bottom: 12px;">Contratos y documentos legales</h3>
-          <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
-            [Descripción editable: Confección a la medida de instrumentos contractuales con blindaje de cláusulas esenciales, penales y de confidencialidad.]
-          </p>
-          <a href="contacto.html" class="btn-link-gold">Cotizar contrato <i class="fa-solid fa-chevron-right"></i></a>
-        </div>
-
-        <div style="background: var(--bg-subtle); padding: 35px 28px; border-radius: var(--radius-md); border: 1px solid var(--border); border-top: 4px solid var(--secondary);">
-          <i class="fa-solid fa-shield-virus" style="font-size: 2.2rem; color: var(--secondary); margin-bottom: 20px; display: block;"></i>
-          <h3 style="font-size: 1.25rem; margin-bottom: 12px;">Orientación preventiva</h3>
-          <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
-            [Descripción editable: Identificación temprana de riesgos legales y formulación de planes correctivos para evitar litigios o sanciones futuras.]
-          </p>
-          <a href="contacto.html" class="btn-link-gold">Prevenir riesgos <i class="fa-solid fa-chevron-right"></i></a>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
+
+  </main>
+
+  <a href="https://wa.me/50432948396?text=Hola%20Abogada%20Lizbeth%20Mart%C3%ADnez,%20quisiera%20consultar%20sobre%20sus%20servicios%20legales." 
+     class="floating-whatsapp" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="WhatsApp Servicios Jurídicos">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="LOGO.png" alt="Bufete Jurídico Martínez Muñoz" class="footer-brand-logo">
           <h4>BUFETE JURÍDICO MARTÍNEZ MUÑOZ</h4>
           <p class="sub">Lizbeth Nicolle Martínez Muñoz | Abogada</p>
-          <p style="font-size: 0.88rem; color: #94A3B8;">Atención jurídica responsable, ética y personalizada en Honduras.</p>
+          <p class="desc">
+            Atención jurídica responsable, ética y personalizada en Honduras. Soluciones legales con criterio y visión estratégica.
+          </p>
         </div>
+
         <div class="footer-col">
           <h4>Navegación</h4>
           <ul class="footer-nav">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="areas.html">Áreas de Práctica</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="abogada.html">La Abogada</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Inicio</a></li>
+            <li><a href="nosotros.html"><i class="fa-solid fa-chevron-right"></i> El Bufete</a></li>
+            <li><a href="areas.html"><i class="fa-solid fa-chevron-right"></i> Áreas de Práctica</a></li>
+            <li><a href="servicios.html"><i class="fa-solid fa-chevron-right"></i> Servicios</a></li>
+            <li><a href="abogada.html"><i class="fa-solid fa-chevron-right"></i> La Abogada</a></li>
+            <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Información Jurídica</a></li>
+            <li><a href="contacto.html"><i class="fa-solid fa-chevron-right"></i> Contacto</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
-          <h4>Contacto</h4>
-          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><a href="tel:+50432948396" style="color:#FFF;">+504 3294-8396</a></div>
-          <div class="footer-contact-item"><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/50432948396" target="_blank" style="color:#FFF;">WhatsApp Oficial</a></div>
-          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><a href="https://share.google/VONZJvOMzdsaSsqNu" target="_blank" style="color:var(--secondary-light);">Ver en Google Maps</a></div>
+          <h4>Canales Directos</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div><a href="tel:+50432948396" style="color: #FFFFFF;">+504 3294-8396</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div><a href="https://wa.me/50432948396" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF;">WhatsApp Oficial</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <a href="https://share.google/VONZJvOMzdsaSsqNu" target="_blank" rel="noopener noreferrer" style="color: var(--secondary-light);">
+                Sede en Google Maps
+              </a>
+            </div>
+          </div>
         </div>
+
         <div class="footer-col">
-          <h4>Sede</h4>
-          <p style="font-size: 0.88rem; color: #94A3B8;">[DIRECCIÓN POR AGREGAR]</p>
+          <h4>Legal & Redes</h4>
+          <ul class="footer-nav" style="margin-bottom: 20px;">
+            <li><a href="privacidad.html"><i class="fa-solid fa-shield-halved"></i> Aviso de Privacidad</a></li>
+            <li><a href="terminos.html"><i class="fa-solid fa-file-contract"></i> Términos de Uso</a></li>
+          </ul>
+          <div class="footer-social-box">
+            <a href="#" class="footer-social-btn" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="footer-social-btn" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="footer-social-btn" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
         </div>
       </div>
+
       <div class="footer-bottom">
         <p>© 2026 Bufete Jurídico Martínez Muñoz. Todos los derechos reservados.</p>
+        <p>Honduras • Servicios Jurídicos Profesionales</p>
       </div>
     </div>
   </footer>

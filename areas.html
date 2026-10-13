@@ -17,14 +17,16 @@
 </head>
 <body>
 
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
   <!-- TOPBAR -->
   <div class="topbar">
     <div class="container topbar-container">
       <div class="topbar-info">
         <div class="topbar-item">
           <i class="fa-solid fa-location-dot"></i>
-          <a href="https://share.google/VONZJvOMzdsaSsqNu" target="_blank" rel="noopener noreferrer" style="color: #CBD5E1;">
-            Ver ubicación oficial en Google Maps
+          <a href="https://share.google/VONZJvOMzdsaSsqNu" target="_blank" rel="noopener noreferrer">
+            Sede Legal en Honduras (Ver en Google Maps)
           </a>
         </div>
         <div class="topbar-item">
@@ -34,18 +36,18 @@
       </div>
       <div class="topbar-actions">
         <div class="topbar-social">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- HEADER -->
-  <header class="main-header">
+  <!-- HEADER NAVEGACIÓN -->
+  <header class="main-header" role="banner">
     <div class="container navbar">
-      <a href="index.html" class="brand-wrapper">
+      <a href="index.html" class="brand-wrapper" aria-label="Bufete Jurídico Martínez Muñoz - Inicio">
         <img src="LOGO.png" alt="Bufete Jurídico Martínez Muñoz" class="brand-logo-img">
         <div class="brand-names">
           <span class="brand-main">MARTÍNEZ MUÑOZ</span>
@@ -53,308 +55,352 @@
         </div>
       </a>
 
-      <button class="menu-toggle-btn" id="menuToggle" aria-label="Menú">
+      <button class="menu-toggle-btn" id="menuToggle" aria-label="Menú de Navegación" aria-expanded="false" aria-controls="navLinks">
         <i class="fa-solid fa-bars"></i>
       </button>
 
-      <ul class="nav-links" id="navLinks">
-        <li class="nav-item"><a href="index.html">Inicio</a></li>
-        <li class="nav-item"><a href="nosotros.html">Nosotros</a></li>
-        <li class="nav-item active"><a href="areas.html">Áreas de Práctica</a></li>
-        <li class="nav-item"><a href="servicios.html">Servicios</a></li>
-        <li class="nav-item"><a href="abogada.html">La Abogada</a></li>
-        <li class="nav-item"><a href="blog.html">Información Jurídica</a></li>
-        <li class="nav-item"><a href="contacto.html">Contacto</a></li>
-      </ul>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links" id="navLinks">
+          <li class="nav-item"><a href="index.html">Inicio</a></li>
+          <li class="nav-item"><a href="nosotros.html">El Bufete</a></li>
+          <li class="nav-item active"><a href="areas.html" aria-current="page">Áreas de Práctica</a></li>
+          <li class="nav-item"><a href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a href="abogada.html">La Abogada</a></li>
+          <li class="nav-item"><a href="blog.html">Información Jurídica</a></li>
+          <li class="nav-item"><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
 
       <div class="nav-cta-btn">
-        <a href="contacto.html" class="btn btn-gold">Solicitar asesoría</a>
+        <a href="contacto.html" class="btn btn-gold">Solicitar una consulta</a>
       </div>
     </div>
   </header>
 
-  <!-- PAGE BANNER -->
-  <div class="page-banner">
-    <div class="container">
-      <span class="page-banner-badge"><i class="fa-solid fa-balance-scale"></i> Cobertura Legal Integral</span>
-      <h1>Áreas de Práctica Jurídica</h1>
-      <p>Asesoramiento y representación jurídica en las principales materias del derecho en Honduras.</p>
-      <div class="breadcrumbs">
-        <a href="index.html">Inicio</a> / <span>Áreas de Práctica</span>
+  <main id="contenido-principal">
+    
+    <!-- PAGE BANNER -->
+    <div class="page-banner">
+      <div class="container">
+        <span class="page-banner-badge"><i class="fa-solid fa-balance-scale"></i> Cobertura Legal Especializada</span>
+        <h1>Áreas de Práctica Jurídica</h1>
+        <p>Asesoramiento riguroso y representación letrada en las disciplinas fundamentales del derecho en Honduras.</p>
+        <div class="breadcrumbs">
+          <a href="index.html">Inicio</a> / <span>Áreas de Práctica</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- CONTENIDO DE ÁREAS -->
-  <section style="padding: 95px 0; background: #FFFFFF;">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-subtitle">Especialidades</span>
-        <h2 class="section-title">Nuestras 10 Disciplinas Jurídicas</h2>
-        <p class="section-desc">Cada asunto es abordado con un análisis minucioso de la normativa y la jurisprudencia aplicable.</p>
+    <!-- REJILLA DE LAS 10 DISCIPLINAS -->
+    <section class="section-py bg-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Disciplinas Jurídicas</span>
+          <h2 class="section-title">Nuestras 10 Áreas de Ejercicio</h2>
+          <p class="section-desc">Cada caso es analizado de forma individualizada, con riguroso apego al marco legal y jurisprudencial hondureño.</p>
+        </div>
+
+        <div class="areas-grid-layout">
+          
+          <!-- 1. DERECHO CIVIL -->
+          <article class="area-card-premium" id="civil">
+            <div class="area-card-img-wrapper">
+              <img src="assets/img/areas/civil.svg" alt="Derecho Civil">
+              <span class="area-card-category">Materia Civil</span>
+            </div>
+            <div class="area-card-body">
+              <h3 class="area-card-title">Derecho Civil</h3>
+              <p class="area-card-desc">Asistencia y asesoría legal en contratos civiles, obligaciones, propiedad, arrendamientos y derechos patrimoniales.</p>
+              <ul class="area-card-list">
+                <li><i class="fa-solid fa-check"></i> Redacción, revisión y rescisión de contratos civiles.</li>
+                <li><i class="fa-solid fa-check"></i> Juicios de posesión, deslinde, usucapión y reivindicación.</li>
+                <li><i class="fa-solid fa-check"></i> Cobro de créditos, títulos ejecutivos y obligaciones.</li>
+                <li><i class="fa-solid fa-check"></i> Sucesiones hereditarias testadas e intestadas.</li>
+              </ul>
+              <div class="area-card-footer">
+                <a href="contacto.html" class="btn btn-gold" style="width: 100%;"><i class="fa-regular fa-paper-plane"></i> Consultar Caso Civil</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. DERECHO DE FAMILIA -->
+          <article class="area-card-premium" id="familia">
+            <div class="area-card-img-wrapper">
+              <img src="assets/img/areas/familia.svg" alt="Derecho de Familia">
+              <span class="area-card-category">Materia Familiar</span>
+            </div>
+            <div class="area-card-body">
+              <h3 class="area-card-title">Derecho de Familia</h3>
+              <p class="area-card-desc">Orientación legal con sensibilidad, reserva y prudencia en procesos de familia y bienestar de menores.</p>
+              <ul class="area-card-list">
+                <li><i class="fa-solid fa-check"></i> Fijación, aumento o rebaja de pensiones de alimentos.</li>
+                <li><i class="fa-solid fa-check"></i> Divorcios por mutuo consentimiento y contenciosos.</li>
+                <li><i class="fa-solid fa-check"></i> Guarda, custodia, patria potestad y régimen de comunicación.</li>
+                <li><i class="fa-solid fa-check"></i> Reconocimiento e impugnación de paternidad y filiación.</li>
+              </ul>
+              <div class="area-card-footer">
+                <a href="contacto.html" class="btn btn-gold" style="width: 100%;"><i class="fa-regular fa-paper-plane"></i> Consultar Asunto Familiar</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. DERECHO LABORAL -->
+          <article class="area-card-premium" id="laboral">
+            <div class="area-card-img-wrapper">
+              <img src="assets/img/areas/laboral.svg" alt="Derecho Laboral">
+              <span class="area-card-category">Materia Laboral</span>
+            </div>
+            <div class="area-card-body">
+              <h3 class="area-card-title">Derecho Laboral</h3>
+              <p class="area-card-desc">Asesoramiento y defensa letrada en relaciones de trabajo tanto para trabajadores como para empleadores.</p>
+              <ul class="area-card-list">
+                <li><i class="fa-solid fa-check"></i> Cálculo y reclamo de prestaciones e indemnizaciones laborales.</li>
+                <li><i class="fa-solid fa-check"></i> Demandas por despidos injustificados y derechos adquiridos.</li>
+                <li><i class="fa-solid fa-check"></i> Conciliación y mediación ante la Secretaría de Trabajo.</li>
+                <li><i class="fa-solid fa-check"></i> Redacción y estructuración de contratos individuales de trabajo.</li>
+              </ul>
+              <div class="area-card-footer">
+                <a href="contacto.html" class="btn btn-gold" style="width: 100%;"><i class="fa-regular fa-paper-plane"></i> Consultar Asunto Laboral</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. DERECHO PENAL -->
+          <article class="area-card-premium" id="penal">
+            <div class="area-card-img-wrapper">
+              <img src="assets/img/areas/penal.svg" alt="Derecho Penal">
+              <span class="area-card-category">Materia Penal</span>
+            </div>
+            <div class="area-card-body">
+              <h3 class="area-card-title">Derecho Penal</h3>
+              <p class="area-card-desc">Orientación técnica y respaldo procesal diligente en el marco de las garantías constitucionales.</p>
+              <ul class="area-card-list">
+                <li><i class="fa-solid fa-check"></i> Asesoría y acompañamiento en denuncias ante el Ministerio Público.</li>
+                <li><i class="fa-solid fa-check"></i> Asistencia en audiencias iniciales, preliminares y juicios.</li>
+                <li><i class="fa-solid fa-check"></i> Medidas cautelares sustitutivas y defensa técnica de derechos.</li>
+                <li><i class="fa-solid fa-check"></i> Delitos patrimoniales, societarios y contra el honor.</li>
+              </ul>
+              <div class="area-card-footer">
+                <a href="contacto.html" class="btn btn-gold" style="width: 100%;"><i class="fa-regular fa-paper-plane"></i> Consultar Materia Penal</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. DERECHO MERCANTIL -->
+          <article class="area-card-premium" id="mercantil">
+            <div class="area-card-img-wrapper">
+              <img src="assets/img/areas/mercantil.svg" alt="Derecho Mercantil">
+              <span class="area-card-category">Materia Comercial</span>
+            </div>
+            <div class="area-card-body">
+              <h3 class="area-card-title">Derecho Mercantil</h3>
+              <p class="area-card-desc">Constitución, estructuración jurídica y defensa patrimonial para emprendedores y sociedades mercantiles.</p>
+              <ul class="area-card-list">
+                <li><i class="fa-solid fa-check"></i> Constitución de Sociedades de Responsabilidad Limitada y Anónimas.</li>
+                <li><i class="fa-solid fa-check"></i> Elaboración de asambleas, actas y modificación de estatutos.</li>
+                <li><i class="fa-solid fa-check"></i> Contratos comerciales de distribución, franquicias y suministro.</li>
+                <li><i class="fa-solid fa-check"></i> Reclamos y cobro de pagarés, cheques y letras de cambio.</li>
+              </ul>
+              <div class="area-card-footer">
+                <a href="contacto.html" class="btn btn-gold" style="width: 100%;"><i class="fa-regular fa-paper-plane"></i> Consultar Caso Mercantil</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. DERECHO ADMINISTRATIVO -->
+          <article class="area-card-premium" id="administrativo">
+            <div class="area-card-img-wrapper">
+              <img src="assets/img/areas/administrativo.svg" alt="Derecho Administrativo">
+              <span class="area-card-category">Sector Público</span>
+            </div>
+            <div class="area-card-body">
+              <h3 class="area-card-title">Derecho Administrativo</h3>
+              <p class="area-card-desc">Defensa de derechos de ciudadanos y empresas frente a resoluciones y actos de la administración pública.</p>
+              <ul class="area-card-list">
+                <li><i class="fa-solid fa-check"></i> Interposición de recursos de reposición y apelación.</li>
+                <li><i class="fa-solid fa-check"></i> Agotamiento de la vía administrativa ante entes estatales.</li>
+                <li><i class="fa-solid fa-check"></i> Juicios contencioso-administrativos ante tribunales de la República.</li>
+                <li><i class="fa-solid fa-check"></i> Asesoría en licitaciones y contrataciones con el Estado.</li>
+              </ul>
+              <div class="area-card-footer">
+                <a href="contacto.html" class="btn btn-gold" style="width: 100%;"><i class="fa-regular fa-paper-plane"></i> Consultar Vía Administrativa</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. ASUNTOS NOTARIALES -->
+          <article class="area-card-premium" id="notarial">
+            <div class="area-card-img-wrapper">
+              <img src="assets/img/areas/notarial.svg" alt="Asuntos Notariales">
+              <span class="area-card-category">Fe Pública</span>
+            </div>
+            <div class="area-card-body">
+              <h3 class="area-card-title">Asuntos Notariales</h3>
+              <p class="area-card-desc">Redacción y coordinación de instrumentos públicos con estricta seguridad jurídica y solemnidad.</p>
+              <ul class="area-card-list">
+                <li><i class="fa-solid fa-check"></i> Escrituras públicas de compraventa, hipotecas y donaciones.</li>
+                <li><i class="fa-solid fa-check"></i> Otorgamiento y revocatoria de poderes generales y especiales.</li>
+                <li><i class="fa-solid fa-check"></i> Protocolización de actas y constitución de regímenes condominales.</li>
+                <li><i class="fa-solid fa-check"></i> Autenticaciones de firmas y testimonios de documentos.</li>
+              </ul>
+              <div class="area-card-footer">
+                <a href="contacto.html" class="btn btn-gold" style="width: 100%;"><i class="fa-regular fa-paper-plane"></i> Coordinar Trámite Notarial</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. TRÁMITES JURÍDICOS -->
+          <article class="area-card-premium" id="tramites">
+            <div class="area-card-img-wrapper">
+              <img src="assets/img/areas/tramites.svg" alt="Trámites Jurídicos">
+              <span class="area-card-category">Gestión Legal</span>
+            </div>
+            <div class="area-card-body">
+              <h3 class="area-card-title">Trámites Jurídicos</h3>
+              <p class="area-card-desc">Gestión integral de expedientes, licencias y registros ante autoridades competentes en Honduras.</p>
+              <ul class="area-card-list">
+                <li><i class="fa-solid fa-check"></i> Inscripciones ante el Instituto de la Propiedad (IP).</li>
+                <li><i class="fa-solid fa-check"></i> Solicitud de solvencias, certificaciones y constancias oficiales.</li>
+                <li><i class="fa-solid fa-check"></i> Registro de marcas, nombres comerciales y signos distintivos.</li>
+                <li><i class="fa-solid fa-check"></i> Permisos de operación y regularización ante municipalidades.</li>
+              </ul>
+              <div class="area-card-footer">
+                <a href="contacto.html" class="btn btn-gold" style="width: 100%;"><i class="fa-regular fa-paper-plane"></i> Iniciar Trámite Legal</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9. LITIGIOS Y REPRESENTACIÓN -->
+          <article class="area-card-premium" id="litigios">
+            <div class="area-card-img-wrapper">
+              <img src="assets/img/areas/litigios.svg" alt="Litigios y Representación">
+              <span class="area-card-category">Tribunales</span>
+            </div>
+            <div class="area-card-body">
+              <h3 class="area-card-title">Litigios y Representación</h3>
+              <p class="area-card-desc">Patrocinio legal y defensa técnica ante los distintos juzgados de paz, letras y cortes de apelaciones.</p>
+              <ul class="area-card-list">
+                <li><i class="fa-solid fa-check"></i> Planteamiento de demandas, contestaciones y excepciones.</li>
+                <li><i class="fa-solid fa-check"></i> Comparecencia procesal en audiencias de juicio oral y público.</li>
+                <li><i class="fa-solid fa-check"></i> Recursos ordinarios de apelación y recursos extraordinarios.</li>
+                <li><i class="fa-solid fa-check"></i> Ejecución de títulos de deuda y sentencias judiciales firmes.</li>
+              </ul>
+              <div class="area-card-footer">
+                <a href="contacto.html" class="btn btn-gold" style="width: 100%;"><i class="fa-regular fa-paper-plane"></i> Evaluar Litigio Legal</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10. ASESORÍA EMPRESARIAL -->
+          <article class="area-card-premium" id="empresarial">
+            <div class="area-card-img-wrapper">
+              <img src="assets/img/areas/empresarial.svg" alt="Asesoría Empresarial">
+              <span class="area-card-category">Corporativo</span>
+            </div>
+            <div class="area-card-body">
+              <h3 class="area-card-title">Asesoría Empresarial</h3>
+              <p class="area-card-desc">Acompañamiento preventivo para empresas orientado a mitigar riesgos legales y garantizar el cumplimiento normativo.</p>
+              <ul class="area-card-list">
+                <li><i class="fa-solid fa-check"></i> Diagnóstico de cumplimiento legal laboral y mercantil.</li>
+                <li><i class="fa-solid fa-check"></i> Blindaje contractual de relaciones con proveedores y clientes.</li>
+                <li><i class="fa-solid fa-check"></i> Planes de contingencia jurídica y resolución extrajudicial de conflictos.</li>
+                <li><i class="fa-solid fa-check"></i> Asesoría externa continua bajo esquemas de iguala legal profesional.</li>
+              </ul>
+              <div class="area-card-footer">
+                <a href="contacto.html" class="btn btn-gold" style="width: 100%;"><i class="fa-regular fa-paper-plane"></i> Consultar Asesoría Corporativa</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
       </div>
+    </section>
 
-      <div class="areas-grid-layout">
-        
-        <!-- 1. DERECHO CIVIL -->
-        <div class="area-card-premium" id="civil">
-          <div class="area-card-img-wrapper">
-            <img src="assets/img/areas/civil.svg" alt="Derecho Civil">
-            <span class="area-card-category">Materia Civil</span>
-          </div>
-          <div class="area-card-body">
-            <h3 class="area-card-title">Derecho Civil</h3>
-            <p class="area-card-desc">Asistencia y asesoría legal en contratos civiles, obligaciones, propiedad, arrendamientos y derechos patrimoniales.</p>
-            <ul class="area-card-list">
-              <li><i class="fa-solid fa-check"></i> Redacción, revisión y resolución de contratos civiles.</li>
-              <li><i class="fa-solid fa-check"></i> Juicios de posesión, deslinde, usucapión y reivindicación.</li>
-              <li><i class="fa-solid fa-check"></i> Cobro de créditos, títulos de deuda y reclamos de indemnización.</li>
-              <li><i class="fa-solid fa-check"></i> Sucesiones hereditarias testadas e intestadas.</li>
-            </ul>
-            <div class="area-card-footer">
-              <a href="contacto.html" class="btn btn-gold" style="width: 100%;"><i class="fa-solid fa-file-pen"></i> Consultar Caso Civil</a>
-            </div>
-          </div>
+    <!-- BANNER DE CONTACTO -->
+    <section class="cta-banner-wrapper">
+      <div class="container">
+        <h2>¿Tiene dudas sobre cuál es el área aplicable a su situación?</h2>
+        <p>Permítanos escuchar su caso para identificar la vía procesal adecuada.</p>
+        <div class="cta-banner-btns">
+          <a href="contacto.html" class="btn btn-gold"><i class="fa-regular fa-calendar-check"></i> Solicitar una orientación inicial</a>
+          <a href="tel:+50432948396" class="btn btn-outline-white"><i class="fa-solid fa-phone"></i> Llamar al +504 3294-8396</a>
         </div>
-
-        <!-- 2. DERECHO DE FAMILIA -->
-        <div class="area-card-premium" id="familia">
-          <div class="area-card-img-wrapper">
-            <img src="assets/img/areas/familia.svg" alt="Derecho de Familia">
-            <span class="area-card-category">Materia Familiar</span>
-          </div>
-          <div class="area-card-body">
-            <h3 class="area-card-title">Derecho de Familia</h3>
-            <p class="area-card-desc">Orientación legal con sensibilidad y reserva en procesos familiares, alimentos, filiación y acuerdos mutuos.</p>
-            <ul class="area-card-list">
-              <li><i class="fa-solid fa-check"></i> Demandas de fijación, rebaja y aumento de alimentos.</li>
-              <li><i class="fa-solid fa-check"></i> Divorcios por mutuo acuerdo y contenciosos.</li>
-              <li><i class="fa-solid fa-check"></i> Patria potestad, guarda, cuidado y régimen de comunicación.</li>
-              <li><i class="fa-solid fa-check"></i> Autorizaciones para salida del país de menores de edad.</li>
-            </ul>
-            <div class="area-card-footer">
-              <a href="contacto.html" class="btn btn-gold" style="width: 100%;"><i class="fa-solid fa-file-pen"></i> Consultar Caso Familiar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. DERECHO LABORAL -->
-        <div class="area-card-premium" id="laboral">
-          <div class="area-card-img-wrapper">
-            <img src="assets/img/areas/laboral.svg" alt="Derecho Laboral">
-            <span class="area-card-category">Materia Laboral</span>
-          </div>
-          <div class="area-card-body">
-            <h3 class="area-card-title">Derecho Laboral</h3>
-            <p class="area-card-desc">Acompañamiento en relaciones de trabajo, contratos laborales, prestaciones y conciliaciones laborales.</p>
-            <ul class="area-card-list">
-              <li><i class="fa-solid fa-check"></i> Cálculo y reclamación de prestaciones laborales conforme al Código de Trabajo.</li>
-              <li><i class="fa-solid fa-check"></i> Despidos injustificados y reclamo de derechos adquiridos.</li>
-              <li><i class="fa-solid fa-check"></i> Representación en audiencias de conciliación administrativa.</li>
-              <li><i class="fa-solid fa-check"></i> Estructuración de contratos individuales y colectivos.</li>
-            </ul>
-            <div class="area-card-footer">
-              <a href="contacto.html" class="btn btn-gold" style="width: 100%;"><i class="fa-solid fa-file-pen"></i> Consultar Caso Laboral</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. DERECHO PENAL -->
-        <div class="area-card-premium" id="penal">
-          <div class="area-card-img-wrapper">
-            <img src="assets/img/areas/penal.svg" alt="Derecho Penal">
-            <span class="area-card-category">Materia Penal</span>
-          </div>
-          <div class="area-card-body">
-            <h3 class="area-card-title">Derecho Penal</h3>
-            <p class="area-card-desc">Asesoría jurídica y orientación profesional ante diligencias e instancias judiciales y preventivas.</p>
-            <ul class="area-card-list">
-              <li><i class="fa-solid fa-check"></i> Orientación en etapas preliminares de investigación y audiencias iniciales.</li>
-              <li><i class="fa-solid fa-check"></i> Asistencia técnica y respeto irrestricto de las garantías constitucionales.</li>
-              <li><i class="fa-solid fa-check"></i> Interposición de medidas sustitutivas a la prisión preventiva.</li>
-              <li><i class="fa-solid fa-check"></i> Representación responsable y ética en juzgados de letras.</li>
-            </ul>
-            <div class="area-card-footer">
-              <a href="contacto.html" class="btn btn-gold" style="width: 100%;"><i class="fa-solid fa-file-pen"></i> Consultar Asunto Penal</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. DERECHO MERCANTIL -->
-        <div class="area-card-premium" id="mercantil">
-          <div class="area-card-img-wrapper">
-            <img src="assets/img/areas/mercantil.svg" alt="Derecho Mercantil">
-            <span class="area-card-category">Materia Mercantil</span>
-          </div>
-          <div class="area-card-body">
-            <h3 class="area-card-title">Derecho Mercantil</h3>
-            <p class="area-card-desc">Constitución de sociedades, gobierno corporativo, títulos valores y contratos comerciales.</p>
-            <ul class="area-card-list">
-              <li><i class="fa-solid fa-check"></i> Constitución de Sociedades Anónimas y de Responsabilidad Limitada.</li>
-              <li><i class="fa-solid fa-check"></i> Redacción de asambleas ordinarias y extraordinarias de socios.</li>
-              <li><i class="fa-solid fa-check"></i> Reclamación y ejecución de pagarés, letras de cambio y cheques.</li>
-              <li><i class="fa-solid fa-check"></i> Fusiones, transformaciones y liquidación societaria.</li>
-            </ul>
-            <div class="area-card-footer">
-              <a href="contacto.html" class="btn btn-gold" style="width: 100%;"><i class="fa-solid fa-file-pen"></i> Consultar Caso Mercantil</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6. DERECHO ADMINISTRATIVO -->
-        <div class="area-card-premium" id="administrativo">
-          <div class="area-card-img-wrapper">
-            <img src="assets/img/areas/administrativo.svg" alt="Derecho Administrativo">
-            <span class="area-card-category">Materia Administrativa</span>
-          </div>
-          <div class="area-card-body">
-            <h3 class="area-card-title">Derecho Administrativo</h3>
-            <p class="area-card-desc">Peticiones, recursos, licencias y trámites formales ante entidades del sector público hondureño.</p>
-            <ul class="area-card-list">
-              <li><i class="fa-solid fa-check"></i> Recursos de reposición, apelación y queja ante secretarías de Estado.</li>
-              <li><i class="fa-solid fa-check"></i> Tramitación de permisos sanitarios, ambientales y licencias de operación.</li>
-              <li><i class="fa-solid fa-check"></i> Procesos de contratación del Estado y licitaciones públicas.</li>
-              <li><i class="fa-solid fa-check"></i> Defensa en procedimientos sancionatorios administrativos.</li>
-            </ul>
-            <div class="area-card-footer">
-              <a href="contacto.html" class="btn btn-gold" style="width: 100%;"><i class="fa-solid fa-file-pen"></i> Consultar Trámite Estatal</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7. ASUNTOS NOTARIALES -->
-        <div class="area-card-premium" id="notarial">
-          <div class="area-card-img-wrapper">
-            <img src="assets/img/areas/notarial.svg" alt="Asuntos Notariales">
-            <span class="area-card-category">Fe Pública y Notariado</span>
-          </div>
-          <div class="area-card-body">
-            <h3 class="area-card-title">Asuntos Notariales</h3>
-            <p class="area-card-desc">Preparación técnica de instrumentos públicos, autenticaciones, declaraciones y formalizaciones.</p>
-            <ul class="area-card-list">
-              <li><i class="fa-solid fa-check"></i> Minutas de escrituras públicas traslativas de dominio e hipotecas.</li>
-              <li><i class="fa-solid fa-check"></i> Otorgamiento de poderes generales para pleitos y especiales.</li>
-              <li><i class="fa-solid fa-check"></i> Auténticas de firmas y copias de documentos oficiales.</li>
-              <li><i class="fa-solid fa-check"></i> Declaraciones juradas y protocolizaciones de actas.</li>
-            </ul>
-            <div class="area-card-footer">
-              <a href="contacto.html" class="btn btn-gold" style="width: 100%;"><i class="fa-solid fa-file-pen"></i> Consultar Servicio Notarial</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 8. TRÁMITES JURÍDICOS -->
-        <div class="area-card-premium" id="tramites">
-          <div class="area-card-img-wrapper">
-            <img src="assets/img/areas/tramites.svg" alt="Trámites Jurídicos">
-            <span class="area-card-category">Gestión Registral</span>
-          </div>
-          <div class="area-card-body">
-            <h3 class="area-card-title">Trámites Jurídicos</h3>
-            <p class="area-card-desc">Gestión integral y expedita de diligencias legales ante registros públicos y dependencias oficiales.</p>
-            <ul class="area-card-list">
-              <li><i class="fa-solid fa-check"></i> Inscripción de escrituras en el Instituto de la Propiedad (IP).</li>
-              <li><i class="fa-solid fa-check"></i> Obtención de certificaciones íntegras de asientos y antecedentes registrales.</li>
-              <li><i class="fa-solid fa-check"></i> Cancelación de hipotecas, embargos y gravámenes.</li>
-              <li><i class="fa-solid fa-check"></i> Trámites migratorios, residencias y permisos especiales.</li>
-            </ul>
-            <div class="area-card-footer">
-              <a href="contacto.html" class="btn btn-gold" style="width: 100%;"><i class="fa-solid fa-file-pen"></i> Solicitar Gestión de Trámite</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 9. LITIGIOS Y REPRESENTACIÓN -->
-        <div class="area-card-premium" id="litigios">
-          <div class="area-card-img-wrapper">
-            <img src="assets/img/areas/litigios.svg" alt="Litigios y Representación">
-            <span class="area-card-category">Defensa Judicial</span>
-          </div>
-          <div class="area-card-body">
-            <h3 class="area-card-title">Litigios y Representación</h3>
-            <p class="area-card-desc">Representación letrada y patrocinio en juzgados, tribunales y audiencias de mediación o arbitraje.</p>
-            <ul class="area-card-list">
-              <li><i class="fa-solid fa-check"></i> Patrocinio legal en juzgados de letras civiles y de lo laboral.</li>
-              <li><i class="fa-solid fa-check"></i> Audiencias preliminares, proposición de medios de prueba y juicio oral.</li>
-              <li><i class="fa-solid fa-check"></i> Redacción e interposición de recursos ordinarios y extraordinarios.</li>
-              <li><i class="fa-solid fa-check"></i> Mecanismos alternativos de solución de conflictos y mediación.</li>
-            </ul>
-            <div class="area-card-footer">
-              <a href="contacto.html" class="btn btn-gold" style="width: 100%;"><i class="fa-solid fa-file-pen"></i> Solicitar Representación Letrada</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 10. ASESORÍA EMPRESARIAL -->
-        <div class="area-card-premium" id="empresarial">
-          <div class="area-card-img-wrapper">
-            <img src="assets/img/areas/empresarial.svg" alt="Asesoría Empresarial">
-            <span class="area-card-category">Blindaje Corporativo</span>
-          </div>
-          <div class="area-card-body">
-            <h3 class="area-card-title">Asesoría Empresarial</h3>
-            <p class="area-card-desc">Blindaje legal, cumplimiento normativo y consultoría preventiva para negocios y emprendedores.</p>
-            <ul class="area-card-list">
-              <li><i class="fa-solid fa-check"></i> Auditoría legal de contratos con clientes y proveedores clave.</li>
-              <li><i class="fa-solid fa-check"></i> Prevención de pasivos laborales y reglamentación interna.</li>
-              <li><i class="fa-solid fa-check"></i> Protección de signos distintivos, marcas y nombres comerciales.</li>
-              <li><i class="fa-solid fa-check"></i> Asesoría jurídica continua bajo modalidad de iguala mensual.</li>
-            </ul>
-            <div class="area-card-footer">
-              <a href="contacto.html" class="btn btn-gold" style="width: 100%;"><i class="fa-solid fa-file-pen"></i> Consultar Plan Empresarial</a>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section style="padding: 70px 0; background: var(--primary-dark); color: #FFFFFF; text-align: center;">
-    <div class="container">
-      <h2 style="color: #FFFFFF; font-size: 2.2rem; margin-bottom: 12px;">¿No estás seguro de qué área corresponde a tu situación?</h2>
-      <p style="color: #CBD5E1; font-size: 1.1rem; max-width: 650px; margin: 0 auto 30px;">
-        Escríbenos una breve descripción de tu caso y con gusto te indicaremos la alternativa legal correspondiente.
-      </p>
-      <a href="contacto.html" class="btn btn-gold"><i class="fa-solid fa-comments"></i> Evaluación Preliminar</a>
-    </div>
-  </section>
+  </main>
+
+  <a href="https://wa.me/50432948396?text=Hola%20Abogada%20Lizbeth%20Mart%C3%ADnez,%20deseo%20consultar%20sobre%20las%20%C3%A1reas%20de%20pr%C3%A1ctica." 
+     class="floating-whatsapp" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="WhatsApp Áreas de Práctica">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="LOGO.png" alt="Bufete Jurídico Martínez Muñoz" class="footer-brand-logo">
           <h4>BUFETE JURÍDICO MARTÍNEZ MUÑOZ</h4>
           <p class="sub">Lizbeth Nicolle Martínez Muñoz | Abogada</p>
-          <p style="font-size: 0.88rem; color: #94A3B8;">Atención jurídica responsable, ética y personalizada en Honduras.</p>
+          <p class="desc">
+            Atención jurídica responsable, ética y personalizada en Honduras. Soluciones legales con criterio y visión estratégica.
+          </p>
         </div>
+
         <div class="footer-col">
           <h4>Navegación</h4>
           <ul class="footer-nav">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="areas.html">Áreas de Práctica</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="abogada.html">La Abogada</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Inicio</a></li>
+            <li><a href="nosotros.html"><i class="fa-solid fa-chevron-right"></i> El Bufete</a></li>
+            <li><a href="areas.html"><i class="fa-solid fa-chevron-right"></i> Áreas de Práctica</a></li>
+            <li><a href="servicios.html"><i class="fa-solid fa-chevron-right"></i> Servicios</a></li>
+            <li><a href="abogada.html"><i class="fa-solid fa-chevron-right"></i> La Abogada</a></li>
+            <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Información Jurídica</a></li>
+            <li><a href="contacto.html"><i class="fa-solid fa-chevron-right"></i> Contacto</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
-          <h4>Contacto</h4>
-          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><a href="tel:+50432948396" style="color:#FFF;">+504 3294-8396</a></div>
-          <div class="footer-contact-item"><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/50432948396" target="_blank" style="color:#FFF;">WhatsApp Oficial</a></div>
-          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><a href="https://share.google/VONZJvOMzdsaSsqNu" target="_blank" style="color:var(--secondary-light);">Ver en Google Maps</a></div>
+          <h4>Canales Directos</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div><a href="tel:+50432948396" style="color: #FFFFFF;">+504 3294-8396</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div><a href="https://wa.me/50432948396" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF;">WhatsApp Oficial</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <a href="https://share.google/VONZJvOMzdsaSsqNu" target="_blank" rel="noopener noreferrer" style="color: var(--secondary-light);">
+                Sede en Google Maps
+              </a>
+            </div>
+          </div>
         </div>
+
         <div class="footer-col">
-          <h4>Sede</h4>
-          <p style="font-size: 0.88rem; color: #94A3B8;">[DIRECCIÓN POR AGREGAR]</p>
+          <h4>Legal & Redes</h4>
+          <ul class="footer-nav" style="margin-bottom: 20px;">
+            <li><a href="privacidad.html"><i class="fa-solid fa-shield-halved"></i> Aviso de Privacidad</a></li>
+            <li><a href="terminos.html"><i class="fa-solid fa-file-contract"></i> Términos de Uso</a></li>
+          </ul>
+          <div class="footer-social-box">
+            <a href="#" class="footer-social-btn" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="footer-social-btn" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="footer-social-btn" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
         </div>
       </div>
+
       <div class="footer-bottom">
         <p>© 2026 Bufete Jurídico Martínez Muñoz. Todos los derechos reservados.</p>
+        <p>Honduras • Servicios Jurídicos Profesionales</p>
       </div>
     </div>
   </footer>

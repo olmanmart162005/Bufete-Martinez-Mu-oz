@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre el Bufete | Bufete Jurídico Martínez Muñoz</title>
-  <meta name="description" content="Conozca el Bufete Jurídico Martínez Muñoz. Misión, visión, valores y compromiso profesional en Honduras con la Abogada Lizbeth Nicolle Martínez Muñoz.">
+  <title>El Bufete | Bufete Jurídico Martínez Muñoz</title>
+  <meta name="description" content="Conozca el Bufete Jurídico Martínez Muñoz. Misión, visión, valores y filosofía institucional en Honduras con la Abogada Lizbeth Nicolle Martínez Muñoz.">
   <link rel="icon" type="image/png" href="LOGO.png">
   
+  <!-- Tipografías Oficiales & Iconos -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,14 +18,16 @@
 </head>
 <body>
 
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
   <!-- TOPBAR -->
   <div class="topbar">
     <div class="container topbar-container">
       <div class="topbar-info">
         <div class="topbar-item">
           <i class="fa-solid fa-location-dot"></i>
-          <a href="https://share.google/VONZJvOMzdsaSsqNu" target="_blank" rel="noopener noreferrer" style="color: #CBD5E1;">
-            Ver ubicación oficial en Google Maps
+          <a href="https://share.google/VONZJvOMzdsaSsqNu" target="_blank" rel="noopener noreferrer">
+            Sede Legal en Honduras (Ver en Google Maps)
           </a>
         </div>
         <div class="topbar-item">
@@ -34,18 +37,18 @@
       </div>
       <div class="topbar-actions">
         <div class="topbar-social">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- HEADER -->
-  <header class="main-header">
+  <!-- HEADER NAVEGACIÓN -->
+  <header class="main-header" role="banner">
     <div class="container navbar">
-      <a href="index.html" class="brand-wrapper">
+      <a href="index.html" class="brand-wrapper" aria-label="Bufete Jurídico Martínez Muñoz - Inicio">
         <img src="LOGO.png" alt="Bufete Jurídico Martínez Muñoz" class="brand-logo-img">
         <div class="brand-names">
           <span class="brand-main">MARTÍNEZ MUÑOZ</span>
@@ -53,169 +56,273 @@
         </div>
       </a>
 
-      <button class="menu-toggle-btn" id="menuToggle" aria-label="Menú">
+      <button class="menu-toggle-btn" id="menuToggle" aria-label="Menú de Navegación" aria-expanded="false" aria-controls="navLinks">
         <i class="fa-solid fa-bars"></i>
       </button>
 
-      <ul class="nav-links" id="navLinks">
-        <li class="nav-item"><a href="index.html">Inicio</a></li>
-        <li class="nav-item active"><a href="nosotros.html">Nosotros</a></li>
-        <li class="nav-item"><a href="areas.html">Áreas de Práctica</a></li>
-        <li class="nav-item"><a href="servicios.html">Servicios</a></li>
-        <li class="nav-item"><a href="abogada.html">La Abogada</a></li>
-        <li class="nav-item"><a href="blog.html">Información Jurídica</a></li>
-        <li class="nav-item"><a href="contacto.html">Contacto</a></li>
-      </ul>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links" id="navLinks">
+          <li class="nav-item"><a href="index.html">Inicio</a></li>
+          <li class="nav-item active"><a href="nosotros.html" aria-current="page">El Bufete</a></li>
+          <li class="nav-item"><a href="areas.html">Áreas de Práctica</a></li>
+          <li class="nav-item"><a href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a href="abogada.html">La Abogada</a></li>
+          <li class="nav-item"><a href="blog.html">Información Jurídica</a></li>
+          <li class="nav-item"><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
 
       <div class="nav-cta-btn">
-        <a href="contacto.html" class="btn btn-gold">Solicitar asesoría</a>
+        <a href="contacto.html" class="btn btn-gold">Solicitar una consulta</a>
       </div>
     </div>
   </header>
 
-  <!-- PAGE BANNER -->
-  <div class="page-banner">
-    <div class="container">
-      <span class="page-banner-badge"><i class="fa-solid fa-landmark"></i> Identidad y Propósito</span>
-      <h1>Sobre el Bufete Jurídico</h1>
-      <p>Conozca nuestra visión del derecho, el equipo y la vocación de excelencia que nos caracteriza.</p>
-      <div class="breadcrumbs">
-        <a href="index.html">Inicio</a> / <span>Nosotros</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- CONTENIDO NOSOTROS -->
-  <section style="padding: 95px 0; background: #FFFFFF;">
-    <div class="container">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 70px;">
-        <div>
-          <span class="section-subtitle">Nuestra Filosofía</span>
-          <h2 style="font-size: 2.3rem; margin-bottom: 22px;">Compromiso, Ética y Acompañamiento Constante</h2>
-          <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-main); margin-bottom: 20px;">
-            El <strong>Bufete Jurídico Martínez Muñoz</strong> ofrece atención y orientación jurídica con un enfoque profesional, responsable y personalizado. Nuestro propósito es brindar a cada persona información clara sobre sus alternativas legales y acompañamiento durante los procesos que correspondan.
-          </p>
-          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted);">
-            Entendemos que detrás de cada consulta jurídica existen proyectos familiares, patrimonios construidos con esfuerzo o situaciones decisivas de vida y negocio. Por ello, actuamos con la más estricta diligencia, buscando soluciones eficaces fundamentadas en el marco jurídico de Honduras.
-          </p>
-        </div>
-        <div style="text-align: center;">
-          <div style="background: var(--bg-subtle); padding: 40px; border-radius: var(--radius-lg); border: 2px solid var(--border-gold); box-shadow: var(--shadow-md);">
-            <img src="LOGO.png" alt="Logo Bufete Martínez Muñoz" style="max-width: 320px; margin: 0 auto;">
-            <h3 style="font-size: 1.3rem; margin-top: 20px; color: var(--primary);">BUFETE JURÍDICO MARTÍNEZ MUÑOZ</h3>
-            <p style="color: var(--secondary-dark); font-weight: 700; letter-spacing: 1px;">Honduras</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- MISIÓN Y VISIÓN -->
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-bottom: 70px;">
-        <div style="background: var(--bg-subtle); padding: 40px; border-radius: var(--radius-md); border-top: 4px solid var(--secondary); box-shadow: var(--shadow-sm);">
-          <div style="width: 55px; height: 55px; background: rgba(197, 160, 89, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--secondary-dark); font-size: 1.4rem; margin-bottom: 20px;">
-            <i class="fa-solid fa-bullseye"></i>
-          </div>
-          <h3 style="font-size: 1.4rem; margin-bottom: 15px;">NUESTRA MISIÓN</h3>
-          <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.8;">
-            "Brindar servicios jurídicos profesionales, responsables y personalizados, orientados a atender las necesidades legales de nuestros clientes."
-          </p>
-        </div>
-
-        <div style="background: var(--bg-subtle); padding: 40px; border-radius: var(--radius-md); border-top: 4px solid var(--primary); box-shadow: var(--shadow-sm);">
-          <div style="width: 55px; height: 55px; background: rgba(28, 43, 58, 0.12); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.4rem; margin-bottom: 20px;">
-            <i class="fa-solid fa-lightbulb"></i>
-          </div>
-          <h3 style="font-size: 1.4rem; margin-bottom: 15px;">NUESTRA VISIÓN</h3>
-          <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.8;">
-            "Consolidarnos como una firma jurídica reconocida por su profesionalismo, ética, confianza y atención personalizada."
-          </p>
-        </div>
-      </div>
-
-      <!-- VALORES INSTITUCIONALES -->
-      <div style="background: var(--primary); color: #FFFFFF; padding: 60px 45px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
-        <div style="text-align: center; margin-bottom: 45px;">
-          <span style="color: var(--secondary-light); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;">Pilares Morales</span>
-          <h2 style="color: #FFFFFF; font-size: 2.2rem; margin-top: 8px;">Nuestros Valores Institucionales</h2>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
-          <div style="border-left: 2px solid var(--secondary); padding-left: 20px;">
-            <h4 style="color: var(--secondary-light); font-size: 1.15rem; margin-bottom: 8px;">Profesionalismo</h4>
-            <p style="color: #CBD5E1; font-size: 0.95rem;">Aplicación técnica y rigurosa de las leyes con actualización continua.</p>
-          </div>
-          <div style="border-left: 2px solid var(--secondary); padding-left: 20px;">
-            <h4 style="color: var(--secondary-light); font-size: 1.15rem; margin-bottom: 8px;">Ética</h4>
-            <p style="color: #CBD5E1; font-size: 0.95rem;">Lealtad incondicional al marco deontológico del Colegio de Abogados.</p>
-          </div>
-          <div style="border-left: 2px solid var(--secondary); padding-left: 20px;">
-            <h4 style="color: var(--secondary-light); font-size: 1.15rem; margin-bottom: 8px;">Responsabilidad</h4>
-            <p style="color: #CBD5E1; font-size: 0.95rem;">Dedicación puntual y rigurosa a cada etapa de la gestión jurídica.</p>
-          </div>
-          <div style="border-left: 2px solid var(--secondary); padding-left: 20px;">
-            <h4 style="color: var(--secondary-light); font-size: 1.15rem; margin-bottom: 8px;">Confianza</h4>
-            <p style="color: #CBD5E1; font-size: 0.95rem;">Vínculo cercano y transparente construido con integridad y respeto mutuo.</p>
-          </div>
-          <div style="border-left: 2px solid var(--secondary); padding-left: 20px;">
-            <h4 style="color: var(--secondary-light); font-size: 1.15rem; margin-bottom: 8px;">Compromiso</h4>
-            <p style="color: #CBD5E1; font-size: 0.95rem;">Defensa firme e incansable de los derechos e intereses de nuestros clientes.</p>
-          </div>
-          <div style="border-left: 2px solid var(--secondary); padding-left: 20px;">
-            <h4 style="color: var(--secondary-light); font-size: 1.15rem; margin-bottom: 8px;">Transparencia</h4>
-            <p style="color: #CBD5E1; font-size: 0.95rem;">Claridad absoluta sobre alcances legales, procedimientos y honorarios.</p>
-          </div>
+  <main id="contenido-principal">
+    
+    <!-- PAGE BANNER -->
+    <div class="page-banner">
+      <div class="container">
+        <span class="page-banner-badge"><i class="fa-solid fa-landmark"></i> Identidad y Propósito</span>
+        <h1>Sobre el Bufete Jurídico</h1>
+        <p>Conozca nuestra visión del derecho, el compromiso ético y la vocación de servicio que nos distingue.</p>
+        <div class="breadcrumbs">
+          <a href="index.html">Inicio</a> / <span>El Bufete</span>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- CTA -->
-  <section style="padding: 70px 0; background: var(--bg-subtle); text-align: center;">
-    <div class="container">
-      <h2 style="font-size: 2.1rem; margin-bottom: 15px;">¿Deseas conversar sobre tu situación legal?</h2>
-      <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px;">Recibe orientación personalizada y directa de la Abogada Lizbeth Martínez.</p>
-      <a href="contacto.html" class="btn btn-gold"><i class="fa-solid fa-calendar-check"></i> Agendar Asesoría</a>
-    </div>
-  </section>
+    <!-- NARRATIVA INSTITUCIONAL -->
+    <section class="section-py bg-white">
+      <div class="container">
+        <div class="grid-2">
+          <div>
+            <span class="section-subtitle">Nuestra Filosofía</span>
+            <h2 class="section-title text-left" style="margin-bottom: 22px;">Compromiso, Criterio y Acompañamiento Constante</h2>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-main); margin-bottom: 20px;">
+              El <strong>Bufete Jurídico Martínez Muñoz</strong> ofrece atención y orientación jurídica con un enfoque profesional, responsable y personalizado. Nuestro propósito es brindar a cada persona información clara sobre sus alternativas legales y acompañamiento durante los procesos que correspondan.
+            </p>
+            <p style="font-size: 1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 25px;">
+              Entendemos que detrás de cada consulta jurídica existen patrimonios construidos con esfuerzo, proyectos familiares decisivos o situaciones comerciales complejas. Por ello, actuamos con la más rigurosa diligencia técnica, fundamentando cada estrategia en el marco legal vigente de la República de Honduras.
+            </p>
+            <div style="border-left: 3px solid var(--secondary); padding-left: 20px;">
+              <p style="font-style: italic; color: var(--primary-night); font-weight: 500; margin: 0;">
+                "La práctica del derecho exige rigor analítico, transparencia con el cliente y un compromiso inquebrantable con la ética profesional."
+              </p>
+            </div>
+          </div>
+          <div style="text-align: center;">
+            <div style="background: var(--ivory); padding: 45px 35px; border-radius: var(--radius-lg); border: 1px solid var(--border-gold); box-shadow: var(--shadow-sm); display: inline-block;">
+              <img src="LOGO.png" alt="Emblema Bufete Martínez Muñoz" style="max-width: 290px; margin: 0 auto 15px;">
+              <h3 style="font-size: 1.25rem; color: var(--primary-night);">MARTÍNEZ MUÑOZ</h3>
+              <p style="color: var(--secondary-dark); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem; margin: 0;">Bufete Jurídico • Honduras</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISIÓN Y VISIÓN -->
+    <section class="section-py bg-ivory">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Rumbo Institucional</span>
+          <h2 class="section-title">Misión y Visión</h2>
+          <p class="section-desc">Los postulados institucionales que rigen nuestras decisiones y el servicio a la comunidad.</p>
+        </div>
+
+        <div class="grid-2">
+          <div style="background: #FFFFFF; padding: 40px 35px; border-radius: var(--radius-md); border-top: 4px solid var(--secondary); box-shadow: var(--shadow-sm);">
+            <div style="width: 52px; height: 52px; background: var(--secondary-subtle); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--secondary-dark); font-size: 1.3rem; margin-bottom: 18px;">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 12px; color: var(--primary-night);">Nuestra Misión</h3>
+            <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.8; margin: 0;">
+              "Brindar servicios jurídicos profesionales, responsables y personalizados, orientados a atender las necesidades legales de nuestros clientes."
+            </p>
+          </div>
+
+          <div style="background: #FFFFFF; padding: 40px 35px; border-radius: var(--radius-md); border-top: 4px solid var(--primary-institutional); box-shadow: var(--shadow-sm);">
+            <div style="width: 52px; height: 52px; background: rgba(27, 48, 70, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-institutional); font-size: 1.3rem; margin-bottom: 18px;">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 12px; color: var(--primary-night);">Nuestra Visión</h3>
+            <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.8; margin: 0;">
+              "Consolidarnos como una firma jurídica reconocida por su profesionalismo, ética, confianza y atención personalizada."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALORES INSTITUCIONALES -->
+    <section class="section-py bg-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Pilares Morales</span>
+          <h2 class="section-title">Valores que nos Rigen</h2>
+          <p class="section-desc">Principios que orientan cada consulta, trámite y representación en nuestro despacho.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="pillar-card">
+            <i class="fa-solid fa-scale-balanced pillar-icon"></i>
+            <h4>Profesionalismo</h4>
+            <p>Aplicación técnica de las leyes con actualización continua y dedicación rigurosa a cada caso.</p>
+          </div>
+
+          <div class="pillar-card">
+            <i class="fa-solid fa-shield-halved pillar-icon"></i>
+            <h4>Ética y Lealtad</h4>
+            <p>Apego estricto al marco deontológico del Colegio de Abogados de Honduras y respeto a la ley.</p>
+          </div>
+
+          <div class="pillar-card">
+            <i class="fa-solid fa-lock pillar-icon"></i>
+            <h4>Confidencialidad</h4>
+            <p>Tratamiento responsable y custodia celosa de la información proporcionada por cada cliente.</p>
+          </div>
+
+          <div class="pillar-card">
+            <i class="fa-solid fa-hand-holding-heart pillar-icon"></i>
+            <h4>Trato Humano</h4>
+            <p>Cercanía, empatía y sensibilidad hacia los problemas personales o familiares de nuestros usuarios.</p>
+          </div>
+
+          <div class="pillar-card">
+            <i class="fa-solid fa-file-invoice pillar-icon"></i>
+            <h4>Transparencia</h4>
+            <p>Información oportuna sobre alternativas procesales, tiempos y honorarios profesionales claros.</p>
+          </div>
+
+          <div class="pillar-card">
+            <i class="fa-solid fa-bullhorn pillar-icon"></i>
+            <h4>Comunicación Oportuna</h4>
+            <p>Mantenemos al cliente informado sobre el avance y novedades de cada gestión realizada.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METODOLOGÍA RESUMEN -->
+    <section class="section-py bg-ivory">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Proceso de Atención</span>
+          <h2 class="section-title">¿Cómo Trabajamos con Usted?</h2>
+          <p class="section-desc">Un esquema de 4 pasos para garantizar una orientación letrada ordenada y efectiva.</p>
+        </div>
+
+        <div class="process-flow-grid">
+          <div class="process-step-item">
+            <div class="step-num-circle">01</div>
+            <h4>Primer Contacto</h4>
+            <p>Recepción de su solicitud por teléfono, WhatsApp o formulario con reserva inicial.</p>
+          </div>
+          <div class="process-step-item">
+            <div class="step-num-circle">02</div>
+            <h4>Comprensión del Caso</h4>
+            <p>Revisión y escucha atenta de los antecedentes y documentación disponible.</p>
+          </div>
+          <div class="process-step-item">
+            <div class="step-num-circle">03</div>
+            <h4>Evaluación Legal</h4>
+            <p>Análisis de las opciones procesales viables según el ordenamiento hondureño.</p>
+          </div>
+          <div class="process-step-item">
+            <div class="step-num-circle">04</div>
+            <h4>Definición y Acción</h4>
+            <p>Acuerdo de estrategia, formalización de la gestión y seguimiento profesional continuo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-banner-wrapper">
+      <div class="container">
+        <h2>Permítanos Asesorarle con Criterio y Compromiso</h2>
+        <p>Estamos a su disposición para analizar su situación legal y ofrecerle una orientación confiable.</p>
+        <div class="cta-banner-btns">
+          <a href="contacto.html" class="btn btn-gold"><i class="fa-regular fa-calendar-check"></i> Solicitar una consulta</a>
+          <a href="tel:+50432948396" class="btn btn-outline-white"><i class="fa-solid fa-phone"></i> Llamar al despacho</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <a href="https://wa.me/50432948396?text=Hola%20Abogada%20Lizbeth%20Mart%C3%ADnez,%20deseo%20solicitar%20informaci%C3%B3n%20sobre%20el%20bufete." 
+     class="floating-whatsapp" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="WhatsApp Bufete Martínez Muñoz">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="LOGO.png" alt="Bufete Jurídico Martínez Muñoz" class="footer-brand-logo">
           <h4>BUFETE JURÍDICO MARTÍNEZ MUÑOZ</h4>
           <p class="sub">Lizbeth Nicolle Martínez Muñoz | Abogada</p>
-          <p style="font-size: 0.88rem; color: #94A3B8;">Atención jurídica responsable, ética y personalizada en Honduras.</p>
+          <p class="desc">
+            Atención jurídica responsable, ética y personalizada en Honduras. Soluciones legales con criterio y visión estratégica.
+          </p>
         </div>
+
         <div class="footer-col">
           <h4>Navegación</h4>
           <ul class="footer-nav">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="areas.html">Áreas de Práctica</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="abogada.html">La Abogada</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Inicio</a></li>
+            <li><a href="nosotros.html"><i class="fa-solid fa-chevron-right"></i> El Bufete</a></li>
+            <li><a href="areas.html"><i class="fa-solid fa-chevron-right"></i> Áreas de Práctica</a></li>
+            <li><a href="servicios.html"><i class="fa-solid fa-chevron-right"></i> Servicios</a></li>
+            <li><a href="abogada.html"><i class="fa-solid fa-chevron-right"></i> La Abogada</a></li>
+            <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Información Jurídica</a></li>
+            <li><a href="contacto.html"><i class="fa-solid fa-chevron-right"></i> Contacto</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
-          <h4>Contacto</h4>
-          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><a href="tel:+50432948396" style="color:#FFF;">+504 3294-8396</a></div>
-          <div class="footer-contact-item"><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/50432948396" target="_blank" style="color:#FFF;">WhatsApp Oficial</a></div>
-          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><a href="https://share.google/VONZJvOMzdsaSsqNu" target="_blank" style="color:var(--secondary-light);">Ver en Google Maps</a></div>
+          <h4>Canales Directos</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div><a href="tel:+50432948396" style="color: #FFFFFF;">+504 3294-8396</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div><a href="https://wa.me/50432948396" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF;">WhatsApp Oficial</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <a href="https://share.google/VONZJvOMzdsaSsqNu" target="_blank" rel="noopener noreferrer" style="color: var(--secondary-light);">
+                Sede en Google Maps
+              </a>
+            </div>
+          </div>
         </div>
+
         <div class="footer-col">
-          <h4>Ubicación</h4>
-          <p style="font-size: 0.88rem; color: #94A3B8;">[DIRECCIÓN POR AGREGAR]</p>
+          <h4>Legal & Redes</h4>
+          <ul class="footer-nav" style="margin-bottom: 20px;">
+            <li><a href="privacidad.html"><i class="fa-solid fa-shield-halved"></i> Aviso de Privacidad</a></li>
+            <li><a href="terminos.html"><i class="fa-solid fa-file-contract"></i> Términos de Uso</a></li>
+          </ul>
           <div class="footer-social-box">
-            <a href="#" class="footer-social-btn"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="footer-social-btn"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="footer-social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="footer-social-btn" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="footer-social-btn" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="footer-social-btn" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>
+
       <div class="footer-bottom">
         <p>© 2026 Bufete Jurídico Martínez Muñoz. Todos los derechos reservados.</p>
+        <p>Honduras • Servicios Jurídicos Profesionales</p>
       </div>
     </div>
   </footer>

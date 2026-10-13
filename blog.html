@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Información Jurídica y Artículos | Bufete Jurídico Martínez Muñoz</title>
-  <meta name="description" content="Artículos, guías y notas informativas legales de orientación del Bufete Jurídico Martínez Muñoz para el público en Honduras.">
+  <meta name="description" content="Artículos, notas orientativas y criterios legales del Bufete Jurídico Martínez Muñoz para ciudadanos y empresas en Honduras.">
   <link rel="icon" type="image/png" href="LOGO.png">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,14 +17,16 @@
 </head>
 <body>
 
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
   <!-- TOPBAR -->
   <div class="topbar">
     <div class="container topbar-container">
       <div class="topbar-info">
         <div class="topbar-item">
           <i class="fa-solid fa-location-dot"></i>
-          <a href="https://share.google/VONZJvOMzdsaSsqNu" target="_blank" rel="noopener noreferrer" style="color: #CBD5E1;">
-            Ver ubicación oficial en Google Maps
+          <a href="https://share.google/VONZJvOMzdsaSsqNu" target="_blank" rel="noopener noreferrer">
+            Sede Legal en Honduras (Ver en Google Maps)
           </a>
         </div>
         <div class="topbar-item">
@@ -34,18 +36,18 @@
       </div>
       <div class="topbar-actions">
         <div class="topbar-social">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- HEADER -->
-  <header class="main-header">
+  <!-- HEADER NAVEGACIÓN -->
+  <header class="main-header" role="banner">
     <div class="container navbar">
-      <a href="index.html" class="brand-wrapper">
+      <a href="index.html" class="brand-wrapper" aria-label="Bufete Jurídico Martínez Muñoz - Inicio">
         <img src="LOGO.png" alt="Bufete Jurídico Martínez Muñoz" class="brand-logo-img">
         <div class="brand-names">
           <span class="brand-main">MARTÍNEZ MUÑOZ</span>
@@ -53,141 +55,215 @@
         </div>
       </a>
 
-      <button class="menu-toggle-btn" id="menuToggle" aria-label="Menú">
+      <button class="menu-toggle-btn" id="menuToggle" aria-label="Menú de Navegación" aria-expanded="false" aria-controls="navLinks">
         <i class="fa-solid fa-bars"></i>
       </button>
 
-      <ul class="nav-links" id="navLinks">
-        <li class="nav-item"><a href="index.html">Inicio</a></li>
-        <li class="nav-item"><a href="nosotros.html">Nosotros</a></li>
-        <li class="nav-item"><a href="areas.html">Áreas de Práctica</a></li>
-        <li class="nav-item"><a href="servicios.html">Servicios</a></li>
-        <li class="nav-item"><a href="abogada.html">La Abogada</a></li>
-        <li class="nav-item active"><a href="blog.html">Información Jurídica</a></li>
-        <li class="nav-item"><a href="contacto.html">Contacto</a></li>
-      </ul>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links" id="navLinks">
+          <li class="nav-item"><a href="index.html">Inicio</a></li>
+          <li class="nav-item"><a href="nosotros.html">El Bufete</a></li>
+          <li class="nav-item"><a href="areas.html">Áreas de Práctica</a></li>
+          <li class="nav-item"><a href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a href="abogada.html">La Abogada</a></li>
+          <li class="nav-item active"><a href="blog.html" aria-current="page">Información Jurídica</a></li>
+          <li class="nav-item"><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
 
       <div class="nav-cta-btn">
-        <a href="contacto.html" class="btn btn-gold">Solicitar asesoría</a>
+        <a href="contacto.html" class="btn btn-gold">Solicitar una consulta</a>
       </div>
     </div>
   </header>
 
-  <!-- PAGE BANNER -->
-  <div class="page-banner">
-    <div class="container">
-      <span class="page-banner-badge"><i class="fa-solid fa-newspaper"></i> Divulgación Legal</span>
-      <h1>Información Jurídica</h1>
-      <p>Artículos orientativos y guías prácticas para conocer las leyes y proteger sus derechos.</p>
-      <div class="breadcrumbs">
-        <a href="index.html">Inicio</a> / <span>Información Jurídica</span>
+  <main id="contenido-principal">
+    
+    <!-- PAGE BANNER -->
+    <div class="page-banner">
+      <div class="container">
+        <span class="page-banner-badge"><i class="fa-solid fa-book-bookmark"></i> Divulgación y Orientación</span>
+        <h1>Información Jurídica</h1>
+        <p>Notas explicativas, criterios normativos y guías formativas para conocer sus derechos y obligaciones.</p>
+        <div class="breadcrumbs">
+          <a href="index.html">Inicio</a> / <span>Información Jurídica</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- ARTÍCULOS GRID -->
-  <section style="padding: 95px 0; background: #FFFFFF;">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-subtitle">Publicaciones Formativas</span>
-        <h2 class="section-title">Guías y Criterios Legales</h2>
-        <p class="section-desc">Estructura preparada para publicación continua de artículos que impulsan el posicionamiento web del bufete.</p>
+    <!-- ARTÍCULOS GRID -->
+    <section class="section-py bg-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Publicaciones Formativas</span>
+          <h2 class="section-title">Artículos y Criterios Legales</h2>
+          <p class="section-desc">Estructura preparada para la divulgación constante de criterios jurídicos aplicables al entorno hondureño.</p>
+        </div>
+
+        <div class="grid-3">
+          
+          <!-- Artículo 1 -->
+          <article class="area-card-premium">
+            <div style="height: 160px; background: linear-gradient(135deg, var(--primary-night) 0%, var(--primary-institutional) 100%); display: flex; align-items: center; justify-content: center; color: var(--secondary-light); font-size: 2.5rem;">
+              <i class="fa-solid fa-people-roof"></i>
+            </div>
+            <div style="padding: 26px 24px; display: flex; flex-direction: column; flex-grow: 1;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.78rem; margin-bottom: 10px;">
+                <span style="color: var(--secondary-dark); font-weight: 700; text-transform: uppercase;">Derecho de Familia</span>
+                <span style="color: var(--text-muted);">Orientación Legal</span>
+              </div>
+              <h3 style="font-size: 1.15rem; margin-bottom: 10px; color: var(--primary-night);">Aspectos Clave sobre Alimentos y Derechos de Menores</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 18px; flex-grow: 1;">
+                Pautas legales básicas sobre la determinación, fijación judicial y cumplimiento de pensiones alimenticias en el marco del Código de Familia de Honduras.
+              </p>
+              <div style="border-top: 1px solid var(--border-light); padding-top: 14px;">
+                <a href="contacto.html" class="btn-link-gold">Consultar sobre este tema <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artículo 2 -->
+          <article class="area-card-premium">
+            <div style="height: 160px; background: linear-gradient(135deg, var(--primary-night) 0%, var(--primary-institutional) 100%); display: flex; align-items: center; justify-content: center; color: var(--secondary-light); font-size: 2.5rem;">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div style="padding: 26px 24px; display: flex; flex-direction: column; flex-grow: 1;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.78rem; margin-bottom: 10px;">
+                <span style="color: var(--secondary-dark); font-weight: 700; text-transform: uppercase;">Derecho Laboral</span>
+                <span style="color: var(--text-muted);">Orientación Legal</span>
+              </div>
+              <h3 style="font-size: 1.15rem; margin-bottom: 10px; color: var(--primary-night);">Derechos y Deberes en el Contrato de Trabajo</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 18px; flex-grow: 1;">
+                Elementos esenciales que deben constar por escrito en los contratos conforme al Código de Trabajo para otorgar certeza jurídica a ambas partes.
+              </p>
+              <div style="border-top: 1px solid var(--border-light); padding-top: 14px;">
+                <a href="contacto.html" class="btn-link-gold">Consultar sobre este tema <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artículo 3 -->
+          <article class="area-card-premium">
+            <div style="height: 160px; background: linear-gradient(135deg, var(--primary-night) 0%, var(--primary-institutional) 100%); display: flex; align-items: center; justify-content: center; color: var(--secondary-light); font-size: 2.5rem;">
+              <i class="fa-solid fa-house-chimney"></i>
+            </div>
+            <div style="padding: 26px 24px; display: flex; flex-direction: column; flex-grow: 1;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.78rem; margin-bottom: 10px;">
+                <span style="color: var(--secondary-dark); font-weight: 700; text-transform: uppercase;">Derecho Inmobiliario</span>
+                <span style="color: var(--text-muted);">Orientación Legal</span>
+              </div>
+              <h3 style="font-size: 1.15rem; margin-bottom: 10px; color: var(--primary-night);">Seguridad Jurídica en la Compraventa de Inmuebles</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 18px; flex-grow: 1;">
+                Revisión de gravámenes en el Instituto de la Propiedad, tradición legítima de dominio y cláusulas contractuales preventivas.
+              </p>
+              <div style="border-top: 1px solid var(--border-light); padding-top: 14px;">
+                <a href="contacto.html" class="btn-link-gold">Consultar sobre este tema <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- AVISO DE DESCARGO LEGAL EN PUBLICACIONES -->
+        <div style="margin-top: 50px; background: var(--ivory); border-left: 3px solid var(--secondary); padding: 22px 26px; border-radius: var(--radius-sm);">
+          <h4 style="font-size: 0.92rem; color: var(--primary-night); margin-bottom: 6px;">
+            <i class="fa-solid fa-shield-halved" style="color: var(--secondary);"></i> Descargo de Responsabilidad Editorial
+          </h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.6;">
+            Las publicaciones contenidas en esta sección tienen fines estrictamente divulgativos y educativos. No constituyen dictamen jurídico vinculante ni reemplazan la asesoría legal individualizada. Para analizar una situación concreta, coordine una consulta con nuestro equipo letrado.
+          </p>
+        </div>
+
       </div>
+    </section>
 
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
-        
-        <!-- Art 1 -->
-        <article class="area-card-premium">
-          <div style="height: 180px; background: linear-gradient(135deg, var(--primary) 0%, #243447 100%); display: flex; align-items: center; justify-content: center; color: var(--secondary-light); font-size: 3rem;">
-            <i class="fa-solid fa-people-roof"></i>
-          </div>
-          <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
-            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px; font-weight: 600;">
-              <span style="color: var(--secondary-dark); text-transform: uppercase;">Derecho de Familia</span>
-              <span>20/09/2026</span>
-            </div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: var(--primary);">[Artículo editable: Aspectos clave sobre pensiones de alimentos y deberes familiares]</h3>
-            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px; flex-grow: 1;">
-              [Contenido de ejemplo: Conoce las pautas legales básicas, los criterios de fijación de alimentos y los procedimientos ante juzgados de familia en Honduras.]
-            </p>
-            <a href="contacto.html" class="btn-link-gold">Consultar sobre este tema <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-        </article>
-
-        <!-- Art 2 -->
-        <article class="area-card-premium">
-          <div style="height: 180px; background: linear-gradient(135deg, var(--primary) 0%, #243447 100%); display: flex; align-items: center; justify-content: center; color: var(--secondary-light); font-size: 3rem;">
-            <i class="fa-solid fa-briefcase"></i>
-          </div>
-          <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
-            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px; font-weight: 600;">
-              <span style="color: var(--secondary-dark); text-transform: uppercase;">Derecho Laboral</span>
-              <span>15/09/2026</span>
-            </div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: var(--primary);">[Artículo editable: Derechos y deberes en el contrato individual de trabajo]</h3>
-            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px; flex-grow: 1;">
-              [Contenido de ejemplo: Los elementos fundamentales que deben constar por escrito en los contratos conforme al Código de Trabajo para evitar contingencias.]
-            </p>
-            <a href="contacto.html" class="btn-link-gold">Consultar sobre este tema <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-        </article>
-
-        <!-- Art 3 -->
-        <article class="area-card-premium">
-          <div style="height: 180px; background: linear-gradient(135deg, var(--primary) 0%, #243447 100%); display: flex; align-items: center; justify-content: center; color: var(--secondary-light); font-size: 3rem;">
-            <i class="fa-solid fa-house-chimney"></i>
-          </div>
-          <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
-            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px; font-weight: 600;">
-              <span style="color: var(--secondary-dark); text-transform: uppercase;">Derecho Civil / Inmuebles</span>
-              <span>10/09/2026</span>
-            </div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: var(--primary);">[Artículo editable: Precauciones indispensables antes de adquirir una propiedad]</h3>
-            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px; flex-grow: 1;">
-              [Contenido de ejemplo: La importancia del saneamiento de antecedentes registrales en el Instituto de la Propiedad para evitar estafas y vicios ocultos.]
-            </p>
-            <a href="contacto.html" class="btn-link-gold">Consultar sobre este tema <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-        </article>
-
+    <!-- BANNER DE CONTACTO -->
+    <section class="cta-banner-wrapper">
+      <div class="container">
+        <h2>¿Requiere un Análisis Jurídico de su Caso Particular?</h2>
+        <p>Nuestro despacho evaluará sus antecedentes con estricto apego a la ley.</p>
+        <div class="cta-banner-btns">
+          <a href="contacto.html" class="btn btn-gold"><i class="fa-regular fa-paper-plane"></i> Formulario de contacto</a>
+          <a href="https://wa.me/50432948396?text=Hola%20Abogada%20Lizbeth%20Mart%C3%ADnez,%20deseo%20hacer%20una%20consulta." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Oficial
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+  </main>
+
+  <a href="https://wa.me/50432948396?text=Hola%20Abogada%20Lizbeth%20Mart%C3%ADnez,%20quisiera%20hacer%20una%20consulta%20legal." 
+     class="floating-whatsapp" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="WhatsApp Blog Jurídico">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="LOGO.png" alt="Bufete Jurídico Martínez Muñoz" class="footer-brand-logo">
           <h4>BUFETE JURÍDICO MARTÍNEZ MUÑOZ</h4>
           <p class="sub">Lizbeth Nicolle Martínez Muñoz | Abogada</p>
-          <p style="font-size: 0.88rem; color: #94A3B8;">Atención jurídica responsable, ética y personalizada en Honduras.</p>
+          <p class="desc">
+            Atención jurídica responsable, ética y personalizada en Honduras. Soluciones legales con criterio y visión estratégica.
+          </p>
         </div>
+
         <div class="footer-col">
           <h4>Navegación</h4>
           <ul class="footer-nav">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="areas.html">Áreas de Práctica</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="abogada.html">La Abogada</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Inicio</a></li>
+            <li><a href="nosotros.html"><i class="fa-solid fa-chevron-right"></i> El Bufete</a></li>
+            <li><a href="areas.html"><i class="fa-solid fa-chevron-right"></i> Áreas de Práctica</a></li>
+            <li><a href="servicios.html"><i class="fa-solid fa-chevron-right"></i> Servicios</a></li>
+            <li><a href="abogada.html"><i class="fa-solid fa-chevron-right"></i> La Abogada</a></li>
+            <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Información Jurídica</a></li>
+            <li><a href="contacto.html"><i class="fa-solid fa-chevron-right"></i> Contacto</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
-          <h4>Contacto</h4>
-          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><a href="tel:+50432948396" style="color:#FFF;">+504 3294-8396</a></div>
-          <div class="footer-contact-item"><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/50432948396" target="_blank" style="color:#FFF;">WhatsApp Oficial</a></div>
-          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><a href="https://share.google/VONZJvOMzdsaSsqNu" target="_blank" style="color:var(--secondary-light);">Ver en Google Maps</a></div>
+          <h4>Canales Directos</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div><a href="tel:+50432948396" style="color: #FFFFFF;">+504 3294-8396</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div><a href="https://wa.me/50432948396" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF;">WhatsApp Oficial</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <a href="https://share.google/VONZJvOMzdsaSsqNu" target="_blank" rel="noopener noreferrer" style="color: var(--secondary-light);">
+                Sede en Google Maps
+              </a>
+            </div>
+          </div>
         </div>
+
         <div class="footer-col">
-          <h4>Sede</h4>
-          <p style="font-size: 0.88rem; color: #94A3B8;">[DIRECCIÓN POR AGREGAR]</p>
+          <h4>Legal & Redes</h4>
+          <ul class="footer-nav" style="margin-bottom: 20px;">
+            <li><a href="privacidad.html"><i class="fa-solid fa-shield-halved"></i> Aviso de Privacidad</a></li>
+            <li><a href="terminos.html"><i class="fa-solid fa-file-contract"></i> Términos de Uso</a></li>
+          </ul>
+          <div class="footer-social-box">
+            <a href="#" class="footer-social-btn" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="footer-social-btn" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="footer-social-btn" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
         </div>
       </div>
+
       <div class="footer-bottom">
         <p>© 2026 Bufete Jurídico Martínez Muñoz. Todos los derechos reservados.</p>
+        <p>Honduras • Servicios Jurídicos Profesionales</p>
       </div>
     </div>
   </footer>
