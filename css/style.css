@@ -388,8 +388,9 @@ ul {
   transition: var(--transition);
   border: 1px solid transparent;
   text-decoration: none;
-  line-height: 1.2;
-  white-space: nowrap !important;
+  line-height: 1.35;
+  text-align: center;
+  max-width: 100%;
 }
 
 .btn-gold {
