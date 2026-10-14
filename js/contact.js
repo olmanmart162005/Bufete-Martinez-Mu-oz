@@ -1,6 +1,9 @@
 /**
  * Gestión y Envío Asíncrono del Formulario de Contacto
- * Integración con Base de Datos Supabase en Tiempo Real
+ * Integración en Tiempo Real:
+ * 1. Base de Datos Supabase (Historial de Consultas)
+ * 2. Notificación Directa por Correo a la Abogada (martzlizbeth157@gmail.com)
+ * 3. Apertura Automática de WhatsApp (+504 3294-8396)
  * Bufete Jurídico Martínez Muñoz
  */
 
@@ -13,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Configuración de Supabase
   const SUPABASE_URL = 'https://kioowgnzmmhqmzodtpum.supabase.co';
   const SUPABASE_KEY = 'sb_publishable_ZDF770U7doR4bXg83EBf6g_YK-QI89U';
+  const LAWYER_EMAIL = 'martzlizbeth157@gmail.com';
+  const LAWYER_PHONE = '50432948396';
 
   // Mapeo de áreas visibles a slugs de la base de datos
   const AREA_SLUG_MAP = {
@@ -102,14 +107,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (submitBtn) {
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Guardando y procesando consulta...';
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Transmitiendo y notificando consulta...';
     }
 
     try {
       const areaSlug = AREA_SLUG_MAP[area] || null;
 
-      // Envío directo a la base de datos Supabase
-      const response = await fetch(`${SUPABASE_URL}/rest/v1/consultas_contacto`, {
+      // A) Envío a la base de datos Supabase
+      const supabasePromise = fetch(`${SUPABASE_URL}/rest/v1/consultas_contacto`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -127,13 +132,54 @@ document.addEventListener('DOMContentLoaded', () => {
         })
       });
 
+      // B) Envío por correo electrónico a la abogada (martzlizbeth157@gmail.com)
+      const emailPromise = fetch(`https://formsubmit.co/ajax/${LAWYER_EMAIL}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          '_subject': `Nueva Consulta Legal: ${area} - ${nombre}`,
+          'Nombre Completo': nombre,
+          'Teléfono / WhatsApp': telefono || 'No especificado',
+          'Correo Electrónico': email,
+          'Área de Consulta': area,
+          'Detalle del Caso': mensaje,
+          '_template': 'table',
+          '_captcha': 'false'
+        })
+      }).catch(err => console.warn('Notificación por correo:', err));
+
+      // Esperar registro en Supabase
+      const response = await supabasePromise;
       if (!response.ok) {
         const errorText = await response.text();
         console.error('Error al registrar en Supabase:', response.status, errorText);
         throw new Error(`Error en servidor (${response.status})`);
       }
 
-      // 5. Confirmación Exitosa al Usuario
+      // Esperar confirmación de despacho de email en segundo plano
+      await emailPromise;
+
+      // C) Generación del enlace oficial para WhatsApp
+      const waText = `*NUEVA CONSULTA LEGAL - BUFETE MARTÍNEZ MUÑOZ*\n\n` +
+        `👤 *Nombre:* ${nombre}\n` +
+        `📞 *Teléfono:* ${telefono || 'No especificado'}\n` +
+        `✉️ *Correo:* ${email}\n` +
+        `⚖️ *Materia:* ${area}\n\n` +
+        `📝 *Descripción del Caso:*\n${mensaje}`;
+
+      const waLink = `https://wa.me/${LAWYER_PHONE}?text=${encodeURIComponent(waText)}`;
+
+      // D) Apertura Automática de WhatsApp en el dispositivo del cliente
+      try {
+        window.open(waLink, '_blank');
+      } catch (errWindow) {
+        console.log('Ventana emergente bloqueada por el navegador:', errWindow);
+      }
+
+      // 5. Confirmación Visual al Usuario
       if (feedbackBox) {
         feedbackBox.className = 'form-alert-feedback success';
         
@@ -141,23 +187,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const safeArea = document.createTextNode(area).wholeText;
         
         feedbackBox.innerHTML = `
-          <div style="font-size: 1.05rem; margin-bottom: 6px;">
-            <i class="fa-solid fa-circle-check"></i> <strong>Consulta Registrada Exitosamente</strong>
+          <div style="font-size: 1.1rem; margin-bottom: 8px;">
+            <i class="fa-solid fa-circle-check"></i> <strong>¡Consulta Registrada y Notificada con Éxito!</strong>
           </div>
-          <p style="margin: 0; color: #166534; font-size: 0.9rem; line-height: 1.6;">
-            Estimado/a <strong>${safeNombre}</strong>, su solicitud referente a <strong>${safeArea}</strong> ha sido guardada en nuestro sistema de atención legal. La Abogada Lizbeth Nicolle Martínez Muñoz revisará los antecedentes iniciales y se comunicará con usted a la brevedad.
+          <p style="margin: 0 0 10px 0; color: #166534; font-size: 0.92rem; line-height: 1.6;">
+            Estimado/a <strong>${safeNombre}</strong>, su solicitud referente a <strong>${safeArea}</strong> ha sido enviada directamente al correo electrónico oficial de la <strong>Abogada Lizbeth Nicolle Martínez Muñoz</strong> y respaldada en nuestro sistema.
+          </p>
+          <p style="margin: 0; color: #166534; font-size: 0.88rem; line-height: 1.5;">
+            Si WhatsApp no se abrió automáticamente en su dispositivo, puede enviar su consulta directamente con un solo clic aquí:
           </p>
         `;
 
-        // Atajo opcional de WhatsApp para enviar copia directa
-        const waText = `Hola Abogada Lizbeth Martínez. Mi nombre es ${nombre}. Acabo de enviar una consulta web sobre ${area}. Detalle: ${mensaje}`;
-        const waLink = `https://wa.me/50432948396?text=${encodeURIComponent(waText)}`;
-        
         const waShortcut = document.createElement('div');
         waShortcut.style.marginTop = '14px';
         waShortcut.innerHTML = `
-          <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%; font-size: 0.85rem;">
-            <i class="fa-brands fa-whatsapp"></i> Enviar también copia por WhatsApp Oficial
+          <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%; font-size: 0.88rem; padding: 13px 20px;">
+            <i class="fa-brands fa-whatsapp"></i> Abrir WhatsApp Oficial (+504 3294-8396) Ahora
           </a>
         `;
         feedbackBox.appendChild(waShortcut);
@@ -175,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <i class="fa-solid fa-triangle-exclamation"></i> <strong>Inconveniente en la conexión</strong>
           </div>
           <p style="margin: 0; font-size: 0.9rem; color: #991B1B;">
-            No se pudo completar el envío web en este instante. Por favor contáctenos directamente a través de nuestro WhatsApp oficial: <strong>+504 3294-8396</strong> o llamando a nuestro despacho.
+            Ocurrió un error al procesar el envío. Por favor comuníquese directamente al WhatsApp oficial: <strong>+504 3294-8396</strong> o al correo <strong>martzlizbeth157@gmail.com</strong>.
           </p>
         `;
         feedbackBox.style.display = 'block';
