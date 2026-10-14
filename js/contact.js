@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <i class="fa-solid fa-circle-check"></i> <strong>¡Consulta Registrada y Notificada con Éxito!</strong>
           </div>
           <p style="margin: 0 0 10px 0; color: #166534; font-size: 0.92rem; line-height: 1.6;">
-            Estimado/a <strong>${safeNombre}</strong>, su solicitud referente a <strong>${safeArea}</strong> ha sido enviada directamente al correo electrónico oficial de la <strong>Abogada Lizbeth Nicolle Martínez Muñoz</strong> y respaldada en nuestro sistema.
+            Estimado/a <strong>${safeNombre}</strong>, su solicitud referente a <strong>${safeArea}</strong> ha sido enviada directamente al correo electrónico oficial de la <strong>Abogada Lízbeth Nicolle Martínez Muñoz</strong> y respaldada en nuestro sistema.
           </p>
           <p style="margin: 0; color: #166534; font-size: 0.88rem; line-height: 1.5;">
             Si WhatsApp no se abrió automáticamente en su dispositivo, puede enviar su consulta directamente con un solo clic aquí:

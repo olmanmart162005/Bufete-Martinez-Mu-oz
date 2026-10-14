@@ -2,7 +2,7 @@
   "name": "bufete-juridico-martinez-munoz",
   "version": "1.0.0",
   "private": true,
-  "description": "Sitio web oficial y sistema de atención del Bufete Jurídico Martínez Muñoz - Abogada Lizbeth Nicolle Martínez Muñoz",
+  "description": "Sitio web oficial y sistema de atención del Bufete Jurídico Martínez Muñoz - Abogada Lízbeth Nicolle Martínez Muñoz",
   "main": "index.html",
   "scripts": {
     "start": "npx serve ."
