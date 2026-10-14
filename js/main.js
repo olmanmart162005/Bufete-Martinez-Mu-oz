@@ -14,6 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
       navLinks.classList.toggle('active', shouldOpen);
       menuToggle.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
       
+      // Bloquear scroll de fondo en móvil para mejor usabilidad
+      if (window.innerWidth <= 1140) {
+        document.body.style.overflow = shouldOpen ? 'hidden' : '';
+      }
+
       const icon = menuToggle.querySelector('i');
       if (icon) {
         if (shouldOpen) {
@@ -26,13 +31,23 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
 
-    menuToggle.addEventListener('click', () => toggleMenu());
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMenu();
+    });
 
     // Cerrar menú con tecla Escape
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && navLinks.classList.contains('active')) {
         toggleMenu(false);
         menuToggle.focus();
+      }
+    });
+
+    // Cerrar menú al hacer clic fuera del panel en móvil
+    document.addEventListener('click', (e) => {
+      if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+        toggleMenu(false);
       }
     });
 

@@ -791,32 +791,65 @@ ul {
 }
 
 /* =====================================================================
-   RESPONSIVE DESIGN & MEDIA QUERIES
+   RESPONSIVE DESIGN & MEDIA QUERIES (MOBILE FIRST ENHANCED)
    ===================================================================== */
+
+/* Tablet & Mobile Drawer Breakpoint (<= 1140px) */
 @media (max-width: 1140px) {
   .menu-toggle-btn {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .nav-links {
     position: fixed;
-    top: 84px;
+    top: 86px;
     left: -100%;
     width: 100%;
-    height: calc(100vh - 84px);
+    max-width: 380px;
+    height: calc(100vh - 86px);
     background: #FFFFFF;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 30px 24px;
-    gap: 16px;
-    box-shadow: var(--shadow-lg);
-    transition: var(--transition);
+    align-items: stretch;
+    padding: 24px 20px;
+    gap: 6px;
+    box-shadow: 10px 0 35px rgba(16, 29, 44, 0.18);
+    transition: left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     overflow-y: auto;
     z-index: 999;
   }
 
   .nav-links.active {
     left: 0;
+  }
+
+  .nav-links .nav-item {
+    width: 100%;
+  }
+
+  .nav-links .nav-item a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    color: var(--primary-night);
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .nav-links .nav-item a::after {
+    display: none;
+  }
+
+  .nav-links .nav-item a:hover,
+  .nav-links .nav-item.active a {
+    background: var(--bg-subtle);
+    color: var(--secondary-dark);
+    font-weight: 700;
   }
 
   .nav-cta-btn {
@@ -828,56 +861,216 @@ ul {
   }
 }
 
+/* Mobile Screens (<= 768px) */
 @media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
   .topbar {
     display: none;
   }
 
   .navbar {
-    height: 72px;
+    height: 68px;
+    gap: 12px;
+  }
+
+  .nav-links {
+    top: 68px;
+    height: calc(100vh - 68px);
+    max-width: 100%;
+    padding: 20px 16px;
   }
 
   .brand-logo-img {
-    height: 46px;
+    height: 42px;
   }
 
   .brand-main {
-    font-size: 1.05rem;
+    font-size: 0.98rem;
+    letter-spacing: 0.8px;
   }
 
   .brand-sub {
-    font-size: 0.62rem;
+    font-size: 0.58rem;
+    letter-spacing: 2px;
   }
 
+  .menu-toggle-btn {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    font-size: 1.25rem;
+    border-radius: 6px;
+  }
+
+  /* Sección espaciados compactos */
   .section-py {
-    padding: 60px 0;
+    padding: 44px 0;
   }
 
   .section-title {
-    font-size: 1.8rem;
+    font-size: clamp(1.45rem, 5.5vw, 1.85rem);
+    margin-bottom: 10px;
+    line-height: 1.25;
   }
 
+  .section-subtitle {
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+  }
+
+  .section-desc {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  /* Banners de páginas interiores */
   .page-banner {
-    padding: 50px 0 40px;
+    padding: 38px 0 32px;
+  }
+
+  .page-banner-badge {
+    font-size: 0.7rem;
+    letter-spacing: 1.2px;
+    margin-bottom: 8px;
+    gap: 6px;
   }
 
   .page-banner h1 {
-    font-size: 1.9rem;
+    font-size: clamp(1.45rem, 5.5vw, 1.85rem);
+    margin-bottom: 8px;
+    line-height: 1.25;
   }
 
+  .page-banner p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+
+  .breadcrumbs {
+    font-size: 0.75rem;
+    gap: 6px;
+  }
+
+  /* Botones globales en móvil: accesibles al pulgar y sin desborde */
+  .btn {
+    white-space: normal !important;
+    text-align: center;
+    min-height: 44px;
+    padding: 12px 18px;
+    font-size: 0.82rem;
+    letter-spacing: 0.4px;
+  }
+
+  /* Grids generales */
   .grid-2, .grid-3, .grid-4 {
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 16px;
+  }
+
+  /* Botón Flotante WhatsApp en Móvil: no obstaculiza lectura */
+  .floating-whatsapp {
+    bottom: 16px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+    font-size: 1.45rem;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45);
+  }
+
+  /* Footer en Móvil */
+  .site-footer {
+    padding: 45px 0 25px;
   }
 
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 24px;
+  }
+
+  .footer-brand-logo {
+    height: 52px;
+    margin-bottom: 12px;
+  }
+
+  .footer-brand h4 {
+    font-size: 0.95rem;
+  }
+
+  .footer-brand .sub {
+    font-size: 0.78rem;
+  }
+
+  .footer-brand .desc {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .footer-col h4 {
+    font-size: 0.92rem;
+    margin-bottom: 12px;
+  }
+
+  .footer-nav li a {
+    font-size: 0.85rem;
+    padding: 5px 0;
+  }
+
+  .footer-contact-item {
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+  }
+
+  .footer-social-box {
+    gap: 10px;
+  }
+
+  .footer-social-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 0.95rem;
   }
 
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+    padding-top: 18px;
+    gap: 6px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Pantallas Extra Pequeñas (<= 380px) */
+@media (max-width: 380px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .brand-logo-img {
+    height: 38px;
+  }
+
+  .brand-main {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+  }
+
+  .brand-sub {
+    font-size: 0.54rem;
+    letter-spacing: 1.5px;
+  }
+
+  .page-banner h1 {
+    font-size: 1.35rem;
   }
 }
 
